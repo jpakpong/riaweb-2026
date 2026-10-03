@@ -39,54 +39,61 @@ export const OverviewSection: React.FC<OverviewSectionProps> = ({
 
   return (
     <div className="space-y-10 pb-12">
-      {/* Hero Section */}
-      <section className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 text-white shadow-lg">
-        <div className="absolute inset-0 opacity-20 pointer-events-none">
+      {/* Hero Section with Bright Blue Theme & Visible Background Image */}
+      <section className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-blue-700 via-blue-600 to-sky-700 text-white shadow-xl">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <img
-            src="/src/assets/images/hero_robotics_automation_1791031840231.jpg"
-            alt="Robotics and Automation Lab"
-            className="w-full h-full object-cover"
-            referrerPolicy="no-referrer"
+            src="/images/hero-bg.jpg"
+            alt="ห้องปฏิบัติการหุ่นยนต์และระบบอัตโนมัติ มหาวิทยาลัยบูรพา"
+            className="w-full h-full object-cover opacity-35 mix-blend-luminosity scale-105"
+            onError={(e) => {
+              const target = e.currentTarget;
+              if (target.src.includes('/images/')) {
+                target.src = '/hero-bg.jpg';
+              }
+            }}
           />
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-700/90 via-blue-600/85 to-sky-700/75" />
         </div>
+
         <div className="relative px-6 py-10 sm:px-10 sm:py-14 max-w-4xl">
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-500/20 backdrop-blur-xs border border-blue-400/30 rounded-md text-blue-200 text-xs font-medium mb-4">
-            <Sparkles className="w-3.5 h-3.5 text-amber-400" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/20 backdrop-blur-xs border border-white/30 rounded-md text-white text-xs font-semibold mb-4 shadow-2xs">
+            <Sparkles className="w-3.5 h-3.5 text-amber-300" />
             <span>หลักสูตรใหม่ พ.ศ. 2569 · ภาควิชาวิศวกรรมเครื่องกล</span>
           </div>
 
-          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-white leading-tight text-balance">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-white leading-tight text-balance drop-shadow-xs">
             หลักสูตรวิศวกรรมศาสตรบัณฑิต
-            <span className="block text-blue-300 mt-1 font-semibold">
+            <span className="block text-amber-200 mt-1 font-bold">
               สาขาวิชาวิศวกรรมหุ่นยนต์และระบบอัตโนมัติอุตสาหกรรม
             </span>
           </h1>
 
-          <p className="mt-2 text-sm sm:text-base text-slate-300 font-medium">
+          <p className="mt-2 text-sm sm:text-base text-blue-100 font-medium">
             Bachelor of Engineering Program in Robotics and Industrial Automation Engineering
           </p>
 
-          <p className="mt-4 text-sm sm:text-base text-slate-200 leading-relaxed max-w-3xl">
+          <p className="mt-4 text-sm sm:text-base text-white/95 leading-relaxed max-w-3xl font-light">
             {PROGRAM_INFO.philosophy}
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <button
               onClick={onNavigateToCurriculum}
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold rounded-lg shadow-sm transition-all focus-visible:ring-2 focus-visible:ring-blue-400"
+              className="inline-flex items-center gap-2 px-5 py-2.5 bg-white hover:bg-blue-50 text-blue-800 text-sm font-bold rounded-lg shadow-sm transition-all focus-visible:ring-2 focus-visible:ring-white"
             >
               <span>ดูโครงสร้างหลักสูตร (123 หน่วยกิต)</span>
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className="w-4 h-4 text-blue-600" />
             </button>
             <button
               onClick={onNavigateToStudyPlan}
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-white/10 hover:bg-white/20 text-white text-sm font-semibold rounded-lg backdrop-blur-xs transition-colors border border-white/20"
+              className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-800/60 hover:bg-blue-800/80 text-white text-sm font-semibold rounded-lg backdrop-blur-xs transition-colors border border-white/25"
             >
               <span>แผนการศึกษา 4 ปี (แผน 1 & 2)</span>
             </button>
             <button
               onClick={onNavigateToStaff}
-              className="inline-flex items-center gap-2 px-4 py-2.5 text-blue-200 hover:text-white text-sm font-medium transition-colors"
+              className="inline-flex items-center gap-2 px-4 py-2.5 text-white hover:text-amber-200 text-sm font-semibold transition-colors"
             >
               <span>คณาจารย์ผู้รับผิดชอบ</span>
             </button>
@@ -186,66 +193,66 @@ export const OverviewSection: React.FC<OverviewSectionProps> = ({
         </div>
       </section>
 
-      {/* Integrated Design Project Continuum (From PDF Page 3-4) */}
-      <section className="bg-slate-900 text-white rounded-2xl p-6 sm:p-8 shadow-sm">
+      {/* Integrated Design Project Continuum (From PDF Page 3-4) with Bright Blue theme */}
+      <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white rounded-2xl p-6 sm:p-8 shadow-md border border-blue-700/50">
         <div className="max-w-2xl mb-8">
-          <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-400 uppercase tracking-wider mb-1">
-            <Layers className="w-4 h-4" />
+          <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-sky-300 uppercase tracking-wider mb-1">
+            <Layers className="w-4 h-4 text-sky-300" />
             <span>กระบวนการเรียนรู้เชิงออกแบบต่อเนื่อง</span>
           </div>
           <h2 className="text-xl sm:text-2xl font-bold text-white mt-1">
             โครงงานบูรณาการ 4 ระดับ (Cornerstone สู่ CWIE)
           </h2>
-          <p className="text-xs sm:text-sm text-slate-300 mt-1">
+          <p className="text-xs sm:text-sm text-blue-100 mt-1">
             Project-based & Work-integrated Learning สะพานเชื่อมระหว่างการเรียนในห้องเรียนกับการปฏิบัติงานจริงในโรงงาน
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-          <div className="p-4 rounded-xl bg-slate-800/80 border border-slate-700">
+          <div className="p-4 rounded-xl bg-white/10 backdrop-blur-xs border border-white/20 hover:bg-white/15 transition-colors">
             <div className="flex items-center justify-between mb-2">
-              <span className="text-xs font-bold text-blue-400">ปีที่ 1 ฤดูร้อน</span>
-              <span className="text-[10px] bg-slate-700 px-2 py-0.5 rounded text-slate-300">1 หน่วยกิต</span>
+              <span className="text-xs font-bold text-sky-300">ปีที่ 1 ฤดูร้อน</span>
+              <span className="text-[10px] bg-blue-700/80 px-2 py-0.5 rounded text-white font-medium">1 หน่วยกิต</span>
             </div>
             <h3 className="text-sm font-bold text-white">Cornerstone Design</h3>
-            <p className="text-xs text-slate-300 mt-1 font-medium">โครงงานบูรณาการฐานราก</p>
-            <p className="text-[11px] text-slate-400 mt-2 leading-relaxed">
+            <p className="text-xs text-blue-100 mt-1 font-medium">โครงงานบูรณาการฐานราก</p>
+            <p className="text-[11px] text-blue-200 mt-2 leading-relaxed">
               ฝึกระบุปัญหา ออกแบบวงจร เซนเซอร์ ไมโครคอนโทรลเลอร์ และสร้างต้นแบบหุ่นยนต์ขนาดเล็กเป็นทีม
             </p>
           </div>
 
-          <div className="p-4 rounded-xl bg-slate-800/80 border border-slate-700">
+          <div className="p-4 rounded-xl bg-white/10 backdrop-blur-xs border border-white/20 hover:bg-white/15 transition-colors">
             <div className="flex items-center justify-between mb-2">
-              <span className="text-xs font-bold text-blue-400">ปีที่ 2 ฤดูร้อน</span>
-              <span className="text-[10px] bg-slate-700 px-2 py-0.5 rounded text-slate-300">1 หน่วยกิต</span>
+              <span className="text-xs font-bold text-sky-300">ปีที่ 2 ฤดูร้อน</span>
+              <span className="text-[10px] bg-blue-700/80 px-2 py-0.5 rounded text-white font-medium">1 หน่วยกิต</span>
             </div>
             <h3 className="text-sm font-bold text-white">Keystone Design</h3>
-            <p className="text-xs text-slate-300 mt-1 font-medium">โครงงานบูรณาการเชื่อมโยง</p>
-            <p className="text-[11px] text-slate-400 mt-2 leading-relaxed">
+            <p className="text-xs text-blue-100 mt-1 font-medium">โครงงานบูรณาการเชื่อมโยง</p>
+            <p className="text-[11px] text-blue-200 mt-2 leading-relaxed">
               ต่อยอดสู่ระบบอัตโนมัติระดับกลาง PLC, มอเตอร์ไฟฟ้า, กลไกอุตสาหกรรม และการเขียนโปรแกรมควบคุม
             </p>
           </div>
 
-          <div className="p-4 rounded-xl bg-slate-800/80 border border-slate-700">
+          <div className="p-4 rounded-xl bg-white/10 backdrop-blur-xs border border-white/20 hover:bg-white/15 transition-colors">
             <div className="flex items-center justify-between mb-2">
-              <span className="text-xs font-bold text-blue-400">ปีที่ 3 ฤดูร้อน</span>
-              <span className="text-[10px] bg-slate-700 px-2 py-0.5 rounded text-slate-300">1 หน่วยกิต</span>
+              <span className="text-xs font-bold text-sky-300">ปีที่ 3 ฤดูร้อน</span>
+              <span className="text-[10px] bg-blue-700/80 px-2 py-0.5 rounded text-white font-medium">1 หน่วยกิต</span>
             </div>
             <h3 className="text-sm font-bold text-white">Capstone Design</h3>
-            <p className="text-xs text-slate-300 mt-1 font-medium">โครงงานบูรณาการเชี่ยวชาญ</p>
-            <p className="text-[11px] text-slate-400 mt-2 leading-relaxed">
+            <p className="text-xs text-blue-100 mt-1 font-medium">โครงงานบูรณาการเชี่ยวชาญ</p>
+            <p className="text-[11px] text-blue-200 mt-2 leading-relaxed">
               จำลองและสร้างระบบอัตโนมัติเต็มรูปแบบ ร่วมกับ AI และ SCADA เพื่อแก้โจทย์ที่มาจากภาคอุตสาหกรรมจริง
             </p>
           </div>
 
-          <div className="p-4 rounded-xl bg-gradient-to-b from-blue-900/60 to-blue-800/40 border border-blue-500/40">
+          <div className="p-4 rounded-xl bg-gradient-to-b from-amber-500/20 to-amber-600/30 border border-amber-400/50">
             <div className="flex items-center justify-between mb-2">
               <span className="text-xs font-bold text-amber-300">ปีที่ 4 (1-2 ภาค)</span>
-              <span className="text-[10px] bg-blue-600 px-2 py-0.5 rounded text-white">12-24 หน่วยกิต</span>
+              <span className="text-[10px] bg-amber-400 text-slate-900 px-2 py-0.5 rounded font-bold">12-24 หน่วยกิต</span>
             </div>
             <h3 className="text-sm font-bold text-white">CWIE สหกิจศึกษา</h3>
-            <p className="text-xs text-blue-200 mt-1 font-medium">ปฏิบัติงานจริงในสถานประกอบการ</p>
-            <p className="text-[11px] text-slate-300 mt-2 leading-relaxed">
+            <p className="text-xs text-amber-200 mt-1 font-medium">ปฏิบัติงานจริงในสถานประกอบการ</p>
+            <p className="text-[11px] text-blue-100 mt-2 leading-relaxed">
               ร่วมทำโครงการจริงกับวิศวกรโรงงานอัจฉริยะ โรงงานผลิตยานยนต์ หรือบริษัทชั้นนำ พร้อมประเมินสมรรถนะ
             </p>
           </div>

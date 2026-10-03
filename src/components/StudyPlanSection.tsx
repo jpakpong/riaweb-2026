@@ -116,34 +116,34 @@ export const StudyPlanSection: React.FC = () => {
         </div>
       </div>
 
-      {/* Interactive Progress Tracking Widget */}
-      <div className="bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 text-white rounded-2xl p-5 sm:p-6 shadow-sm">
+      {/* Interactive Progress Tracking Widget with Bright Blue theme */}
+      <div className="bg-gradient-to-r from-blue-700 via-blue-600 to-sky-700 text-white rounded-2xl p-5 sm:p-6 shadow-md border border-blue-500/40">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
           <div>
-            <div className="flex items-center gap-2 text-xs font-medium text-blue-300">
-              <CheckSquare className="w-4 h-4 text-emerald-400" />
+            <div className="flex items-center gap-2 text-xs font-semibold text-sky-200">
+              <CheckSquare className="w-4 h-4 text-amber-300" />
               <span>เครื่องมือช่วยวางแผนการเรียนนิสิต (Interactive Credit Tracker)</span>
             </div>
             <h2 className="text-base sm:text-lg font-bold text-white mt-1">
               ติดตามหน่วยกิตสะสมเพื่อสำเร็จการศึกษา
             </h2>
-            <p className="text-xs text-slate-300 mt-0.5">
+            <p className="text-xs text-blue-100 mt-0.5">
               คลิกที่ช่องทำเครื่องหมายหน้ารายวิชาด้านล่างเพื่อบันทึกวิชาที่สอบผ่านแล้ว
             </p>
           </div>
 
           <div className="flex items-center gap-4">
             <div className="text-right">
-              <span className="text-xs text-slate-300">หน่วยกิตสะสม</span>
-              <p className="text-xl sm:text-2xl font-bold text-emerald-400 tabular-nums">
+              <span className="text-xs text-blue-100">หน่วยกิตสะสม</span>
+              <p className="text-xl sm:text-2xl font-bold text-amber-300 tabular-nums">
                 {totalEarnedCredits}{' '}
-                <span className="text-xs font-normal text-slate-400">/ 123 นก.</span>
+                <span className="text-xs font-normal text-blue-200">/ 123 นก.</span>
               </p>
             </div>
             {completedCourses.size > 0 && (
               <button
                 onClick={() => setCompletedCourses(new Set())}
-                className="p-2 text-slate-400 hover:text-white bg-slate-800 rounded-lg text-xs flex items-center gap-1 transition-colors"
+                className="p-2 text-white hover:bg-white/20 bg-white/10 rounded-lg text-xs flex items-center gap-1 transition-colors border border-white/20"
                 title="รีเซ็ตการเลือกทั้งหมด"
               >
                 <RotateCcw className="w-3.5 h-3.5" />
@@ -155,13 +155,13 @@ export const StudyPlanSection: React.FC = () => {
 
         {/* Progress Bar */}
         <div className="mt-4">
-          <div className="w-full bg-slate-800 rounded-full h-2.5 overflow-hidden">
+          <div className="w-full bg-blue-900/60 rounded-full h-3 overflow-hidden border border-white/20">
             <div
-              className="bg-emerald-500 h-2.5 rounded-full transition-all duration-300"
+              className="bg-amber-400 h-3 rounded-full transition-all duration-300 shadow-xs"
               style={{ width: `${completionPercent}%` }}
             />
           </div>
-          <div className="flex justify-between text-[11px] text-slate-400 mt-1">
+          <div className="flex justify-between text-[11px] text-blue-100 mt-1.5 font-medium">
             <span>ความก้าวหน้า {completionPercent}%</span>
             <span>เหลืออีก {Math.max(0, 123 - totalEarnedCredits)} หน่วยกิตเพื่อจบการศึกษา</span>
           </div>

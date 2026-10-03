@@ -8,7 +8,9 @@ export interface Course {
   module?: string;
   year?: number;
   semester?: 'term1' | 'term2' | 'summer';
-  description?: string;
+  descriptionTh?: string;
+  descriptionEn?: string;
+  prerequisite?: string;
 }
 
 export interface AcademicStaff {
@@ -505,7 +507,7 @@ export const ACADEMIC_STAFFS: AcademicStaff[] = [
     positionTh: 'ผู้ช่วยศาสตราจารย์ (อาจารย์ผู้รับผิดชอบหลักสูตร / ประธานหลักสูตร)',
     positionEn: 'Assistant Professor / Program Director',
     role: 'responsible',
-    image: '/src/assets/images/portrait_pakpong_1791031862585.jpg',
+    image: '/images/pakpong.jpg',
     email: 'pakpong@eng.buu.ac.th',
     office: 'อาคารวิศวกรรมศาสตร์ 1 ภาควิชาวิศวกรรมเครื่องกล มหาวิทยาลัยบูรพา',
     degrees: [
@@ -522,7 +524,7 @@ export const ACADEMIC_STAFFS: AcademicStaff[] = [
     positionTh: 'อาจารย์ (อาจารย์ผู้รับผิดชอบหลักสูตร)',
     positionEn: 'Lecturer / Program Committee',
     role: 'responsible',
-    image: '/src/assets/images/portrait_paiboon_1791031883238.jpg',
+    image: '/images/paiboon.jpg',
     email: 'paiboon.l@eng.buu.ac.th',
     office: 'อาคารวิศวกรรมศาสตร์ 1 ภาควิชาวิศวกรรมเครื่องกล มหาวิทยาลัยบูรพา',
     degrees: [
@@ -539,7 +541,7 @@ export const ACADEMIC_STAFFS: AcademicStaff[] = [
     positionTh: 'ผู้ช่วยศาสตราจารย์ (อาจารย์ผู้รับผิดชอบหลักสูตร)',
     positionEn: 'Assistant Professor / Program Committee',
     role: 'responsible',
-    image: '/src/assets/images/portrait_jitti_1791031895692.jpg',
+    image: '/images/jitti.jpg',
     email: 'jitti.p@eng.buu.ac.th',
     office: 'อาคารวิศวกรรมศาสตร์ 1 ภาควิชาวิศวกรรมเครื่องกล มหาวิทยาลัยบูรพา',
     degrees: [
@@ -556,7 +558,7 @@ export const ACADEMIC_STAFFS: AcademicStaff[] = [
     positionTh: 'ผู้ช่วยศาสตราจารย์ (อาจารย์ผู้รับผิดชอบหลักสูตร)',
     positionEn: 'Assistant Professor / Program Committee',
     role: 'responsible',
-    image: '/src/assets/images/portrait_pareecha_1791031907028.jpg',
+    image: '/images/pareecha.jpg',
     email: 'pareecha@eng.buu.ac.th',
     office: 'อาคารวิศวกรรมศาสตร์ 1 ภาควิชาวิศวกรรมเครื่องกล มหาวิทยาลัยบูรพา',
     degrees: [
@@ -574,7 +576,7 @@ export const ACADEMIC_STAFFS: AcademicStaff[] = [
     positionTh: 'อาจารย์ (อาจารย์ผู้รับผิดชอบหลักสูตร)',
     positionEn: 'Lecturer / Program Committee',
     role: 'responsible',
-    image: '/src/assets/images/portrait_natthapol_1791031919448.jpg',
+    image: '/images/natthapol.jpg',
     email: 'natthapol.s@eng.buu.ac.th',
     office: 'อาคารวิศวกรรมศาสตร์ 1 ภาควิชาวิศวกรรมเครื่องกล มหาวิทยาลัยบูรพา',
     degrees: [
@@ -583,38 +585,6 @@ export const ACADEMIC_STAFFS: AcademicStaff[] = [
       { degree: 'วศ.บ.', field: 'วิศวกรรมเครื่องกล', institution: 'จุฬาลงกรณ์มหาวิทยาลัย', country: 'Thailand', year: 'พ.ศ. 2561' },
     ],
     expertise: ['Artificial Intelligence & Computer Vision', 'Smart Manufacturing & Industry 4.0', 'Autonomous Mobile Robots (AMR)', 'Industrial Machine Learning'],
-  },
-  {
-    id: 'pisak',
-    nameTh: 'ผศ.ดร.พิศาล / คณาจารย์ภาควิชา',
-    nameEn: 'Faculty Member / Mechanical & Automation Staff',
-    positionTh: 'ผู้ช่วยศาสตราจารย์ ประจำคณะวิศวกรรมศาสตร์',
-    positionEn: 'Assistant Professor, Faculty of Engineering',
-    role: 'faculty',
-    image: '/src/assets/images/portrait_pisak_1791031936435.jpg',
-    email: 'faculty.mech@eng.buu.ac.th',
-    office: 'อาคารวิศวกรรมศาสตร์ ภาควิชาวิศวกรรมเครื่องกล มหาวิทยาลัยบูรพา',
-    degrees: [
-      { degree: 'Ph.D.', field: 'Engineering', institution: 'มหาวิทยาลัยบูรพา / มหาวิทยาลัยชั้นนำ', country: 'Thailand', year: 'พ.ศ. 2555' },
-      { degree: 'วศ.ม.', field: 'วิศวกรรมเครื่องกล', institution: 'มหาวิทยาลัยบูรพา', country: 'Thailand', year: 'พ.ศ. 2548' },
-    ],
-    expertise: ['Industrial Automation & Pneumatics', 'Engineering Workshop & Safety', 'Sensors & Actuators'],
-  },
-  {
-    id: 'worachest',
-    nameTh: 'ผศ.ดร.วรเชษฐ์ / คณาจารย์ภาควิชา',
-    nameEn: 'Faculty Member / Mechanical & Automation Staff',
-    positionTh: 'ผู้ช่วยศาสตราจารย์ ประจำคณะวิศวกรรมศาสตร์',
-    positionEn: 'Assistant Professor, Faculty of Engineering',
-    role: 'faculty',
-    image: '/src/assets/images/portrait_worachest_1791031948198.jpg',
-    email: 'faculty.mech2@eng.buu.ac.th',
-    office: 'อาคารวิศวกรรมศาสตร์ ภาควิชาวิศวกรรมเครื่องกล มหาวิทยาลัยบูรพา',
-    degrees: [
-      { degree: 'Ph.D.', field: 'Mechanical Engineering', institution: 'มหาวิทยาลัยชั้นนำ', country: 'Thailand', year: 'พ.ศ. 2553' },
-      { degree: 'วศ.ม.', field: 'วิศวกรรมเครื่องกล', institution: 'มหาวิทยาลัยชั้นนำ', country: 'Thailand', year: 'พ.ศ. 2545' },
-    ],
-    expertise: ['Energy & Sustainable Systems', 'Mechanical Design & Predictive Maintenance', 'Industrial Manufacturing'],
   },
 ];
 

@@ -173,44 +173,44 @@ export const CareerPathSection: React.FC = () => {
         </div>
       </div>
 
-      {/* Career Growth Continuum */}
-      <div className="bg-slate-900 text-white rounded-2xl p-6 sm:p-8">
+      {/* Career Growth Continuum with Bright Blue theme */}
+      <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white rounded-2xl p-6 sm:p-8 shadow-md border border-blue-700/50">
         <h3 className="text-lg font-bold text-white mb-2">
           เส้นทางการเติบโตในสายอาชีพ (Engineering Career Progression)
         </h3>
-        <p className="text-xs text-slate-300 max-w-2xl mb-6">
+        <p className="text-xs text-blue-100 max-w-2xl mb-6">
           โครงสร้างหลักสูตรเตรียมความพร้อมตั้งแต่ระดับปฏิบัติการ สู่การบริหารจัดการโครงการและผู้ประกอบการเทคโนโลยี
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-xs">
-          <div className="p-4 bg-slate-800/80 rounded-xl border border-slate-700">
-            <span className="text-blue-400 font-bold block mb-1">ปีที่ 1-2 หลังจบ</span>
+          <div className="p-4 bg-white/10 backdrop-blur-xs rounded-xl border border-white/20">
+            <span className="text-sky-300 font-bold block mb-1">ปีที่ 1-2 หลังจบ</span>
             <h4 className="font-bold text-white text-sm">Junior Engineer</h4>
-            <p className="text-slate-400 mt-1 leading-relaxed">
+            <p className="text-blue-200 mt-1 leading-relaxed">
               ผู้ควบคุมและเขียนโปรแกรมหุ่นยนต์ PLC, วิเคราะห์และแก้ไขปัญหาระบบหน้างาน
             </p>
           </div>
 
-          <div className="p-4 bg-slate-800/80 rounded-xl border border-slate-700">
-            <span className="text-blue-400 font-bold block mb-1">ปีที่ 3-5 หลังจบ</span>
+          <div className="p-4 bg-white/10 backdrop-blur-xs rounded-xl border border-white/20">
+            <span className="text-sky-300 font-bold block mb-1">ปีที่ 3-5 หลังจบ</span>
             <h4 className="font-bold text-white text-sm">Senior Engineer</h4>
-            <p className="text-slate-400 mt-1 leading-relaxed">
+            <p className="text-blue-200 mt-1 leading-relaxed">
               ผู้ออกแบบระบบอัตโนมัติเต็มรูปแบบ (System Designer), ควบคุมทีมวิศวกรและโครงการ
             </p>
           </div>
 
-          <div className="p-4 bg-slate-800/80 rounded-xl border border-slate-700">
-            <span className="text-blue-400 font-bold block mb-1">ปีที่ 5-10 หลังจบ</span>
+          <div className="p-4 bg-white/10 backdrop-blur-xs rounded-xl border border-white/20">
+            <span className="text-sky-300 font-bold block mb-1">ปีที่ 5-10 หลังจบ</span>
             <h4 className="font-bold text-white text-sm">Engineering Manager / SI Lead</h4>
-            <p className="text-slate-400 mt-1 leading-relaxed">
+            <p className="text-blue-200 mt-1 leading-relaxed">
               บริหารจัดการโรงงานอัจฉริยะ วางแผนการลงทุนเทคโนโลยี และนำการทำ Digital Transformation
             </p>
           </div>
 
-          <div className="p-4 bg-gradient-to-b from-blue-900/60 to-blue-800/40 rounded-xl border border-blue-500/40">
+          <div className="p-4 bg-gradient-to-b from-amber-500/20 to-amber-600/30 rounded-xl border border-amber-400/50">
             <span className="text-amber-300 font-bold block mb-1">10 ปีขึ้นไป</span>
             <h4 className="font-bold text-white text-sm">Tech Entrepreneur / CTO</h4>
-            <p className="text-slate-300 mt-1 leading-relaxed">
+            <p className="text-amber-100 mt-1 leading-relaxed">
               ก่อตั้งบริษัท System Integrator ของตนเอง หรือดำรงตำแหน่งผู้บริหารสายเทคโนโลยีระดับสูง
             </p>
           </div>

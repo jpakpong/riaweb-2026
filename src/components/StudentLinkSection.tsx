@@ -128,40 +128,40 @@ export const StudentLinkSection: React.FC = () => {
         })}
       </div>
 
-      {/* Academic Calendar Milestones (From PDF page 7) */}
-      <div className="bg-slate-900 text-white rounded-2xl p-6 sm:p-8">
-        <div className="flex items-center gap-2 text-xs font-semibold text-blue-400 uppercase tracking-wider mb-1">
-          <Calendar className="w-4 h-4" />
+      {/* Academic Calendar Milestones with Bright Blue theme */}
+      <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white rounded-2xl p-6 sm:p-8 shadow-md border border-blue-700/50">
+        <div className="flex items-center gap-2 text-xs font-semibold text-sky-300 uppercase tracking-wider mb-1">
+          <Calendar className="w-4 h-4 text-sky-300" />
           <span>รอบการศึกษาและการดำเนินการหลักสูตร</span>
         </div>
         <h2 className="text-lg sm:text-xl font-bold text-white mt-1">
           กำหนดช่วงเวลาเปิดภาคการศึกษา (ระบบทวิภาค)
         </h2>
-        <p className="text-xs text-slate-300 mt-1 max-w-2xl">
+        <p className="text-xs text-blue-100 mt-1 max-w-2xl">
           การจัดการเรียนการสอนในวันและเวลาราชการปกติ ตามประกาศมหาวิทยาลัยบูรพา
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6 text-xs">
-          <div className="p-4 bg-slate-800/80 rounded-xl border border-slate-700">
-            <span className="text-blue-400 font-bold block mb-1">ภาคการศึกษาต้น</span>
+          <div className="p-4 bg-white/10 backdrop-blur-xs rounded-xl border border-white/20">
+            <span className="text-sky-300 font-bold block mb-1">ภาคการศึกษาต้น</span>
             <h4 className="text-sm font-bold text-white">เดือนกรกฎาคม — พฤศจิกายน</h4>
-            <p className="text-slate-400 mt-1.5 leading-relaxed">
+            <p className="text-blue-200 mt-1.5 leading-relaxed">
               ระยะเวลาศึกษาไม่น้อยกว่า 15 สัปดาห์ การเรียนการสอนภาคปกติประจำภาคเรียนที่ 1
             </p>
           </div>
 
-          <div className="p-4 bg-slate-800/80 rounded-xl border border-slate-700">
-            <span className="text-blue-400 font-bold block mb-1">ภาคการศึกษาปลาย</span>
+          <div className="p-4 bg-white/10 backdrop-blur-xs rounded-xl border border-white/20">
+            <span className="text-sky-300 font-bold block mb-1">ภาคการศึกษาปลาย</span>
             <h4 className="text-sm font-bold text-white">เดือนพฤศจิกายน — เมษายน</h4>
-            <p className="text-slate-400 mt-1.5 leading-relaxed">
+            <p className="text-blue-200 mt-1.5 leading-relaxed">
               ระยะเวลาศึกษาไม่น้อยกว่า 15 สัปดาห์ การเรียนการสอนภาคปกติประจำภาคเรียนที่ 2
             </p>
           </div>
 
-          <div className="p-4 bg-blue-900/60 rounded-xl border border-blue-500/40">
+          <div className="p-4 bg-gradient-to-b from-amber-500/20 to-amber-600/30 rounded-xl border border-amber-400/50">
             <span className="text-amber-300 font-bold block mb-1">ภาคการศึกษาฤดูร้อน (Summer)</span>
             <h4 className="text-sm font-bold text-white">เดือนเมษายน — มิถุนายน</h4>
-            <p className="text-blue-100 mt-1.5 leading-relaxed">
+            <p className="text-amber-100 mt-1.5 leading-relaxed">
               ระยะเวลาไม่น้อยกว่า 8 สัปดาห์ สำหรับโครงงานบูรณาการ Cornerstone, Keystone, Capstone
             </p>
           </div>
