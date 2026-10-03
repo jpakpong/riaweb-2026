@@ -1,0 +1,6 @@
+{
+  "name": "Robotics & Automation Curriculum - Burapha University",
+  "description": "ระบบข้อมูลหลักสูตรวิศวกรรมศาสตรบัณฑิต สาขาวิชาวิศวกรรมหุ่นยนต์และระบบอัตโนมัติอุตสาหกรรม พ.ศ. 2569 คณะวิศวกรรมศาสตร์ มหาวิทยาลัยบูรพา",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
