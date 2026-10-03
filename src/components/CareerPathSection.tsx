@@ -72,8 +72,8 @@ export const CareerPathSection: React.FC = () => {
                 onClick={() => setSelectedCareer(item)}
                 className={`p-4 rounded-xl border transition-all cursor-pointer ${
                   isSelected
-                    ? 'bg-blue-600 text-white border-blue-600 shadow-sm'
-                    : 'bg-white border-slate-200 hover:border-blue-300 text-slate-800'
+                    ? 'bg-[#274c77] text-white border-[#274c77] shadow-sm'
+                    : 'bg-white border-slate-200 hover:border-[#274c77] text-slate-800'
                 }`}
               >
                 <div className="flex items-center justify-between">

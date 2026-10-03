@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { Search, X, BookOpen, Users, Briefcase, ChevronRight } from 'lucide-react';
 import { COURSES, ACADEMIC_STAFFS, CAREER_PATHS } from '../data/curriculumData';
+import { formatCredits } from './StudyPlanSection';
 
 interface SearchModalProps {
   isOpen: boolean;
@@ -50,7 +51,7 @@ export const SearchModal: React.FC<SearchModalProps> = ({
       <div className="bg-white rounded-2xl max-w-2xl w-full shadow-2xl border border-slate-200 overflow-hidden animate-in fade-in zoom-in-95 duration-150">
         {/* Search input header */}
         <div className="p-4 border-b border-slate-200 flex items-center gap-3">
-          <Search className="w-5 h-5 text-blue-600 shrink-0" />
+          <Search className="w-5 h-5 text-[#274c77] shrink-0" />
           <input
             type="text"
             placeholder="ค้นหา เช่น PLC, ปัญญาประดิษฐ์, ดร.ภัคพงศ์, สหกิจศึกษา, หุ่นยนต์..."
@@ -87,7 +88,7 @@ export const SearchModal: React.FC<SearchModalProps> = ({
               {results.courses.length > 0 && (
                 <div>
                   <div className="flex items-center gap-1.5 text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">
-                    <BookOpen className="w-3.5 h-3.5 text-blue-600" />
+                    <BookOpen className="w-3.5 h-3.5 text-[#274c77]" />
                     <span>รายวิชา ({results.courses.length})</span>
                   </div>
                   <div className="space-y-1">
@@ -102,13 +103,13 @@ export const SearchModal: React.FC<SearchModalProps> = ({
                       >
                         <div>
                           <div className="flex items-center gap-2">
-                            <span className="font-mono font-bold text-blue-700">{course.code}</span>
+                            <span className="font-mono font-bold text-[#274c77]">{course.code}</span>
                             <span className="font-semibold text-slate-900">{course.nameTh}</span>
                           </div>
                           <p className="text-[11px] text-slate-500 mt-0.5">{course.nameEn}</p>
                         </div>
                         <span className="font-mono text-slate-600 text-[11px] shrink-0 font-medium">
-                          {course.credits} นก.
+                          {formatCredits(course.credits, course.format)}
                         </span>
                       </div>
                     ))}
@@ -120,7 +121,7 @@ export const SearchModal: React.FC<SearchModalProps> = ({
               {results.staffs.length > 0 && (
                 <div>
                   <div className="flex items-center gap-1.5 text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">
-                    <Users className="w-3.5 h-3.5 text-blue-600" />
+                    <Users className="w-3.5 h-3.5 text-[#274c77]" />
                     <span>คณาจารย์ ({results.staffs.length})</span>
                   </div>
                   <div className="space-y-1">
@@ -148,7 +149,7 @@ export const SearchModal: React.FC<SearchModalProps> = ({
               {results.careers.length > 0 && (
                 <div>
                   <div className="flex items-center gap-1.5 text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">
-                    <Briefcase className="w-3.5 h-3.5 text-blue-600" />
+                    <Briefcase className="w-3.5 h-3.5 text-[#274c77]" />
                     <span>เส้นทางอาชีพ ({results.careers.length})</span>
                   </div>
                   <div className="space-y-1">

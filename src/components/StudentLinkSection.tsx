@@ -95,19 +95,19 @@ export const StudentLinkSection: React.FC = () => {
               href={service.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-5 bg-white rounded-2xl border border-slate-200/90 hover:border-blue-400 hover:shadow-xs transition-all flex flex-col justify-between group"
+              className="p-5 bg-white rounded-2xl border border-slate-200/90 hover:border-[#274c77] hover:shadow-xs transition-all flex flex-col justify-between group"
             >
               <div>
                 <div className="flex items-center justify-between mb-3">
-                  <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-700 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                  <div className="w-10 h-10 rounded-xl bg-[#f2f6fa] text-[#274c77] flex items-center justify-center group-hover:bg-[#274c77] group-hover:text-white transition-colors">
                     <Icon className="w-5 h-5" />
                   </div>
-                  <span className="text-slate-400 group-hover:text-blue-600 transition-colors">
+                  <span className="text-slate-400 group-hover:text-[#274c77] transition-colors">
                     <ExternalLink className="w-4 h-4" />
                   </span>
                 </div>
 
-                <h3 className="text-sm font-bold text-slate-900 group-hover:text-blue-700 transition-colors leading-snug">
+                <h3 className="text-sm font-bold text-slate-900 group-hover:text-[#274c77] transition-colors leading-snug">
                   {service.titleTh}
                 </h3>
                 <p className="text-[11px] text-slate-400 mt-0.5 font-medium">
@@ -119,7 +119,7 @@ export const StudentLinkSection: React.FC = () => {
                 </p>
               </div>
 
-              <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-blue-600 font-semibold">
+              <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-[#274c77] font-semibold">
                 <span>เข้าสู่ระบบบริการ</span>
                 <span className="group-hover:translate-x-1 transition-transform">→</span>
               </div>

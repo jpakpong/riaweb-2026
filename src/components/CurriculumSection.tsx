@@ -5,6 +5,7 @@ import {
   Course,
 } from '../data/curriculumData';
 import { COURSE_DESCRIPTIONS } from '../data/courseDescriptions';
+import { formatCredits } from './StudyPlanSection';
 import {
   Search,
   Filter,
@@ -66,18 +67,18 @@ export const CurriculumSection: React.FC = () => {
 
         {/* 3 Main Pillars Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
-          <div className="p-4 rounded-xl bg-blue-50/60 border border-blue-100 flex flex-col justify-between">
+          <div className="p-4 rounded-xl bg-[#f2f6fa] border border-[#d6e3ef] flex flex-col justify-between">
             <div>
               <div className="flex items-center justify-between">
-                <span className="text-xs font-bold text-blue-700">หมวดที่ 1</span>
-                <span className="text-lg font-bold text-blue-900 tabular-nums">24 หน่วยกิต</span>
+                <span className="text-xs font-bold text-[#274c77]">หมวดที่ 1</span>
+                <span className="text-lg font-bold text-[#1f385c] tabular-nums">24 หน่วยกิต</span>
               </div>
               <h3 className="text-sm font-bold text-slate-900 mt-2">หมวดวิชาศึกษาทั่วไป</h3>
               <p className="text-xs text-slate-600 mt-1 leading-relaxed">
                 พัฒนาทักษะภาษาอังกฤษ (6), การคิดแก้ปัญหาในยุคดิจิทัล (6), การจัดการชีวิตในสังคม (6) และความเป็นผู้ประกอบการ (6)
               </p>
             </div>
-            <div className="mt-3 pt-2 border-t border-blue-200/60 text-[11px] text-blue-800 font-medium">
+            <div className="mt-3 pt-2 border-t border-[#d8e4f0] text-[11px] text-[#274c77] font-medium">
               4 โมดูลพัฒนาทักษะศตวรรษที่ 21
             </div>
           </div>
@@ -162,7 +163,7 @@ export const CurriculumSection: React.FC = () => {
               onClick={() => setSelectedCategory(tab.id)}
               className={`px-3 py-1.5 text-xs font-medium rounded-lg whitespace-nowrap transition-colors ${
                 selectedCategory === tab.id
-                  ? 'bg-blue-700 text-white shadow-2xs font-semibold'
+                  ? 'bg-[#274c77] text-white shadow-2xs font-semibold'
                   : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-50 hover:text-slate-900'
               }`}
             >
@@ -184,7 +185,7 @@ export const CurriculumSection: React.FC = () => {
               <div>
                 <div className="flex items-start justify-between gap-2">
                   <div className="flex items-center gap-2">
-                    <span className="font-mono text-xs font-bold text-blue-700 bg-blue-50 px-2 py-0.5 rounded-md border border-blue-200/50">
+                    <span className="font-mono text-xs font-bold text-[#274c77] bg-[#edf3f8] px-2 py-0.5 rounded-md border border-[#d6e3ef]">
                       {course.code}
                     </span>
                     <span className="text-[11px] text-slate-500 font-medium">
@@ -192,7 +193,7 @@ export const CurriculumSection: React.FC = () => {
                     </span>
                   </div>
                   <span className="font-mono text-xs font-bold text-slate-800 shrink-0">
-                    {course.credits} นก. {course.format}
+                    {formatCredits(course.credits, course.format)}
                   </span>
                 </div>
 
@@ -216,7 +217,7 @@ export const CurriculumSection: React.FC = () => {
                     ? 'วิชาเอกเลือก'
                     : 'วิชาศึกษาทั่วไป'}
                 </span>
-                <span className="text-blue-600 font-semibold text-[11px] flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">
+                <span className="text-[#274c77] font-semibold text-[11px] flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">
                   ดูรายละเอียด <ChevronRight className="w-3.5 h-3.5" />
                 </span>
               </div>
@@ -275,15 +276,23 @@ export const CurriculumSection: React.FC = () => {
                 {/* Credit and Format stats */}
                 <div className="grid grid-cols-2 gap-3 p-3.5 bg-slate-50 rounded-xl">
                   <div>
-                    <span className="text-slate-400 block text-[11px]">จำนวนหน่วยกิต</span>
-                    <span className="font-bold text-slate-900 text-sm sm:text-base">
-                      {selectedCourse.credits} หน่วยกิต
+                    <span className="text-slate-400 block text-[11px]">หน่วยกิต (บรรยาย-ปฏิบัติ-ค้นคว้า)</span>
+                    <span className="font-bold text-slate-900 text-sm sm:text-base font-mono">
+                      {formatCredits(selectedCourse.credits, selectedCourse.format)}
                     </span>
                   </div>
                   <div>
-                    <span className="text-slate-400 block text-[11px]">ชั่วโมง (บรรยาย-ปฏิบัติ-ค้นคว้า)</span>
-                    <span className="font-bold text-slate-900 text-sm sm:text-base font-mono">
-                      {selectedCourse.format}
+                    <span className="text-slate-400 block text-[11px]">หมวดวิชา</span>
+                    <span className="font-semibold text-slate-900 text-xs sm:text-sm mt-0.5 block">
+                      {selectedCourse.category === 'core'
+                        ? 'วิชาแกนวิศวกรรม'
+                        : selectedCourse.category === 'major-compulsory'
+                        ? 'วิชาเอกบังคับ'
+                        : selectedCourse.category === 'project-cwie'
+                        ? 'โครงงาน / สหกิจศึกษา'
+                        : selectedCourse.category === 'major-elective'
+                        ? 'วิชาเอกเลือก'
+                        : 'วิชาศึกษาทั่วไป'}
                     </span>
                   </div>
                 </div>
@@ -334,7 +343,7 @@ export const CurriculumSection: React.FC = () => {
               <div className="pt-3 border-t border-slate-100 flex justify-end">
                 <button
                   onClick={() => setSelectedCourse(null)}
-                  className="px-5 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg text-xs transition-colors"
+                  className="px-5 py-2 bg-[#274c77] hover:bg-[#1f3d60] text-white font-medium rounded-lg text-xs transition-colors"
                 >
                   ปิดหน้าต่าง
                 </button>

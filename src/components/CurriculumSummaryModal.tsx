@@ -24,7 +24,7 @@ export const CurriculumSummaryModal: React.FC<SummaryModalProps> = ({
         {/* Header Actions */}
         <div className="p-4 border-b border-slate-200 flex items-center justify-between bg-slate-50">
           <div className="flex items-center gap-2">
-            <ShieldCheck className="w-5 h-5 text-blue-700" />
+            <ShieldCheck className="w-5 h-5 text-[#274c77]" />
             <span className="text-xs sm:text-sm font-bold text-slate-900">
               เอกสารสรุปสาระสำคัญหลักสูตร พ.ศ. 2569
             </span>
@@ -51,9 +51,6 @@ export const CurriculumSummaryModal: React.FC<SummaryModalProps> = ({
         <div className="p-6 sm:p-8 overflow-y-auto space-y-6 text-xs sm:text-sm text-slate-800 font-prompt">
           {/* Document Header */}
           <div className="border-b border-slate-200 pb-5 text-center space-y-1.5">
-            <div className="flex justify-center mb-3">
-              <BUULogo size="md" />
-            </div>
             <h2 className="text-base sm:text-lg font-bold text-slate-900">
               {PROGRAM_INFO.programNameTh}
             </h2>
@@ -119,7 +116,7 @@ export const CurriculumSummaryModal: React.FC<SummaryModalProps> = ({
                 <div key={staff.id} className="p-2.5 bg-slate-50 rounded-lg">
                   <p className="font-bold text-slate-900">{staff.nameTh}</p>
                   <p className="text-[11px] text-slate-500">{staff.positionTh}</p>
-                  <p className="text-[11px] text-blue-700 mt-0.5">{staff.degrees[0].degree} ({staff.degrees[0].institution})</p>
+                  <p className="text-[11px] text-[#274c77] mt-0.5">{staff.degrees[0].degree} ({staff.degrees[0].institution})</p>
                 </div>
               ))}
             </div>

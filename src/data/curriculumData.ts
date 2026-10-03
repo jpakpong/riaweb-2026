@@ -25,7 +25,6 @@ export interface AcademicStaff {
     field: string;
     institution: string;
     country?: string;
-    year: string;
   }[];
   expertise: string[];
   email: string;
@@ -507,15 +506,15 @@ export const ACADEMIC_STAFFS: AcademicStaff[] = [
     positionTh: 'ผู้ช่วยศาสตราจารย์ (อาจารย์ผู้รับผิดชอบหลักสูตร / ประธานหลักสูตร)',
     positionEn: 'Assistant Professor / Program Director',
     role: 'responsible',
-    image: '/images/pakpong.jpg',
+    image: '/pakpong.jpg',
     email: 'pakpong@eng.buu.ac.th',
-    office: 'อาคารวิศวกรรมศาสตร์ 1 ภาควิชาวิศวกรรมเครื่องกล มหาวิทยาลัยบูรพา',
+    office: 'อาคารภาควิชาวิศวกรรมเครื่องกล คณะวิศวกรรมศาสตร์',
     degrees: [
-      { degree: 'Ph.D.', field: 'Engineering', institution: 'University of Southampton', country: 'UK', year: 'พ.ศ. 2551' },
-      { degree: 'M.Eng.Sc.', field: 'Mechanical Engineering', institution: 'University of New South Wales', country: 'Australia', year: 'พ.ศ. 2543' },
-      { degree: 'วศ.บ.', field: 'วิศวกรรมเครื่องกล', institution: 'สถาบันเทคโนโลยีพระจอมเกล้าธนบุรี (มจธ.)', country: 'Thailand', year: 'พ.ศ. 2539' },
+      { degree: 'Ph.D.', field: 'Engineering', institution: 'University of Southampton', country: 'UK' },
+      { degree: 'M.Eng.Sc.', field: 'Mechanical Engineering', institution: 'University of New South Wales', country: 'Australia' },
+      { degree: 'วศ.บ.', field: 'วิศวกรรมเครื่องกล', institution: 'สถาบันเทคโนโลยีพระจอมเกล้าธนบุรี (มจธ.)', country: 'Thailand' },
     ],
-    expertise: ['Robotics & Industrial Automation', 'Advanced Control Systems', 'Sensor Integration & Microcontrollers', 'Mechatronic System Design'],
+    expertise: ['Advanced Control Systems', 'Artificial Intelligence', 'Machine Learning'],
   },
   {
     id: 'paiboon',
@@ -524,15 +523,15 @@ export const ACADEMIC_STAFFS: AcademicStaff[] = [
     positionTh: 'อาจารย์ (อาจารย์ผู้รับผิดชอบหลักสูตร)',
     positionEn: 'Lecturer / Program Committee',
     role: 'responsible',
-    image: '/images/paiboon.jpg',
+    image: '/paiboon.jpg',
     email: 'paiboon.l@eng.buu.ac.th',
-    office: 'อาคารวิศวกรรมศาสตร์ 1 ภาควิชาวิศวกรรมเครื่องกล มหาวิทยาลัยบูรพา',
+    office: 'อาคารภาควิชาวิศวกรรมเครื่องกล คณะวิศวกรรมศาสตร์',
     degrees: [
-      { degree: 'วศ.ด.', field: 'วิศวกรรมเครื่องกล', institution: 'มหาวิทยาลัยเชียงใหม่', country: 'Thailand', year: 'พ.ศ. 2563' },
-      { degree: 'วศ.ม.', field: 'วิศวกรรมเครื่องกล', institution: 'มหาวิทยาลัยเชียงใหม่', country: 'Thailand', year: 'พ.ศ. 2543' },
-      { degree: 'วศ.บ.', field: 'วิศวกรรมเครื่องกล', institution: 'มหาวิทยาลัยเชียงใหม่', country: 'Thailand', year: 'พ.ศ. 2541' },
+      { degree: 'วศ.ด.', field: 'วิศวกรรมเครื่องกล', institution: 'มหาวิทยาลัยเชียงใหม่', country: 'Thailand' },
+      { degree: 'วศ.ม.', field: 'วิศวกรรมเครื่องกล', institution: 'มหาวิทยาลัยเชียงใหม่', country: 'Thailand' },
+      { degree: 'วศ.บ.', field: 'วิศวกรรมเครื่องกล', institution: 'มหาวิทยาลัยเชียงใหม่', country: 'Thailand' },
     ],
-    expertise: ['Programmable Logic Control (PLC)', 'Industrial Motion Control', 'Industrial SCADA Systems', 'Factory Automation'],
+    expertise: ['Industrial SCADA Systems', 'Mechanism Design', 'Mechanical Simulation & CAD/CAE'],
   },
   {
     id: 'jitti',
@@ -541,15 +540,15 @@ export const ACADEMIC_STAFFS: AcademicStaff[] = [
     positionTh: 'ผู้ช่วยศาสตราจารย์ (อาจารย์ผู้รับผิดชอบหลักสูตร)',
     positionEn: 'Assistant Professor / Program Committee',
     role: 'responsible',
-    image: '/images/jitti.jpg',
+    image: '/jitti.jpg',
     email: 'jitti.p@eng.buu.ac.th',
-    office: 'อาคารวิศวกรรมศาสตร์ 1 ภาควิชาวิศวกรรมเครื่องกล มหาวิทยาลัยบูรพา',
+    office: 'อาคารภาควิชาวิศวกรรมเครื่องกล คณะวิศวกรรมศาสตร์',
     degrees: [
-      { degree: 'Ph.D.', field: 'Mechanical Engineering', institution: 'The University of Manchester', country: 'UK', year: 'พ.ศ. 2554' },
-      { degree: 'วศ.ม.', field: 'วิศวกรรมเครื่องกล', institution: 'สถาบันเทคโนโลยีพระจอมเกล้าพระนครเหนือ (มจพ.)', country: 'Thailand', year: 'พ.ศ. 2547' },
-      { degree: 'วศ.บ.', field: 'วิศวกรรมเครื่องกล', institution: 'มหาวิทยาลัยเทคโนโลยีมหานคร', country: 'Thailand', year: 'พ.ศ. 2544' },
+      { degree: 'Ph.D.', field: 'Mechanical Engineering', institution: 'The University of Manchester', country: 'UK' },
+      { degree: 'วศ.ม.', field: 'วิศวกรรมเครื่องกล', institution: 'สถาบันเทคโนโลยีพระจอมเกล้าพระนครเหนือ (มจพ.)', country: 'Thailand' },
+      { degree: 'วศ.บ.', field: 'วิศวกรรมเครื่องกล', institution: 'มหาวิทยาลัยเทคโนโลยีมหานคร', country: 'Thailand' },
     ],
-    expertise: ['Mechanical Simulation & CAD/CAE', 'Dynamics & Solid Mechanics', 'Mechanism Design', 'Robotic Kinematics'],
+    expertise: ['Programmable Logic Control', 'Industrial Motion Control', 'Factory Automation'],
   },
   {
     id: 'pareecha',
@@ -558,16 +557,16 @@ export const ACADEMIC_STAFFS: AcademicStaff[] = [
     positionTh: 'ผู้ช่วยศาสตราจารย์ (อาจารย์ผู้รับผิดชอบหลักสูตร)',
     positionEn: 'Assistant Professor / Program Committee',
     role: 'responsible',
-    image: '/images/pareecha.jpg',
+    image: '/pareecha.jpg',
     email: 'pareecha@eng.buu.ac.th',
-    office: 'อาคารวิศวกรรมศาสตร์ 1 ภาควิชาวิศวกรรมเครื่องกล มหาวิทยาลัยบูรพา',
+    office: 'อาคารภาควิชาวิศวกรรมเครื่องกล คณะวิศวกรรมศาสตร์',
     degrees: [
-      { degree: 'Ph.D.', field: 'Engineering', institution: 'University of Southampton', country: 'UK', year: 'พ.ศ. 2557' },
-      { degree: 'M.Sc.', field: 'Maritime Engineering Science', institution: 'University of Southampton', country: 'UK', year: 'พ.ศ. 2551' },
-      { degree: 'วศ.ม.', field: 'วิศวกรรมเครื่องกล', institution: 'มหาวิทยาลัยเชียงใหม่', country: 'Thailand', year: 'พ.ศ. 2546' },
-      { degree: 'วศ.บ.', field: 'วิศวกรรมเครื่องกล', institution: 'มหาวิทยาลัยเทคโนโลยีสุรนารี (มทส.)', country: 'Thailand', year: 'พ.ศ. 2543' },
+      { degree: 'Ph.D.', field: 'Engineering', institution: 'University of Southampton', country: 'UK' },
+      { degree: 'M.Sc.', field: 'Maritime Engineering Science', institution: 'University of Southampton', country: 'UK' },
+      { degree: 'วศ.ม.', field: 'วิศวกรรมเครื่องกล', institution: 'มหาวิทยาลัยเชียงใหม่', country: 'Thailand' },
+      { degree: 'วศ.บ.', field: 'วิศวกรรมเครื่องกล', institution: 'มหาวิทยาลัยเทคโนโลยีสุรนารี (มทส.)', country: 'Thailand' },
     ],
-    expertise: ['Thermo-Fluids & Flow Simulation', 'Green & Sustainable Engineering', 'Marine & Autonomous Vehicles', 'Engineering Optimization'],
+    expertise: ['Dynamics & Solid Mechanics', 'Thermo-Fluids & Flow Simulation'],
   },
   {
     id: 'natthapol',
@@ -576,15 +575,15 @@ export const ACADEMIC_STAFFS: AcademicStaff[] = [
     positionTh: 'อาจารย์ (อาจารย์ผู้รับผิดชอบหลักสูตร)',
     positionEn: 'Lecturer / Program Committee',
     role: 'responsible',
-    image: '/images/natthapol.jpg',
+    image: '/natthapol.jpg',
     email: 'natthapol.s@eng.buu.ac.th',
-    office: 'อาคารวิศวกรรมศาสตร์ 1 ภาควิชาวิศวกรรมเครื่องกล มหาวิทยาลัยบูรพา',
+    office: 'อาคารภาควิชาวิศวกรรมเครื่องกล คณะวิศวกรรมศาสตร์',
     degrees: [
-      { degree: 'Ph.D.', field: 'Manufacturing Engineering', institution: 'University of Nottingham', country: 'UK', year: 'พ.ศ. 2567' },
-      { degree: 'M.Sc.', field: 'Robotics', institution: 'University of Bristol', country: 'UK', year: 'พ.ศ. 2563' },
-      { degree: 'วศ.บ.', field: 'วิศวกรรมเครื่องกล', institution: 'จุฬาลงกรณ์มหาวิทยาลัย', country: 'Thailand', year: 'พ.ศ. 2561' },
+      { degree: 'Ph.D.', field: 'Manufacturing Engineering', institution: 'University of Nottingham', country: 'UK' },
+      { degree: 'M.Sc.', field: 'Robotics', institution: 'University of Bristol', country: 'UK' },
+      { degree: 'วศ.บ.', field: 'วิศวกรรมเครื่องกล', institution: 'จุฬาลงกรณ์มหาวิทยาลัย', country: 'Thailand' },
     ],
-    expertise: ['Artificial Intelligence & Computer Vision', 'Smart Manufacturing & Industry 4.0', 'Autonomous Mobile Robots (AMR)', 'Industrial Machine Learning'],
+    expertise: ['Computer Vision', 'Sensor Integration & Microcontrollers', 'Robotics & Industrial Automation'],
   },
 ];
 

@@ -84,8 +84,8 @@ export const Sidebar: React.FC<SidebarProps> = ({
     <div className="flex flex-col h-full bg-white border-r border-slate-200">
       {/* Sidebar Header / Program Key Info */}
       <div className="p-4 sm:p-5 border-b border-slate-100 bg-slate-50/60">
-        <div className="flex items-center gap-2 text-xs font-semibold text-blue-700 uppercase tracking-wider mb-1">
-          <GraduationCap className="w-4 h-4 text-blue-600 shrink-0" />
+        <div className="flex items-center gap-2 text-xs font-semibold text-[#274c77] uppercase tracking-wider mb-1">
+          <GraduationCap className="w-4 h-4 text-[#274c77] shrink-0" />
           <span>ภาควิชาวิศวกรรมเครื่องกล</span>
         </div>
         <h2 className="text-base font-bold text-slate-900 leading-snug">
@@ -110,13 +110,13 @@ export const Sidebar: React.FC<SidebarProps> = ({
               onClick={() => handleSelect(item.id)}
               className={`w-full text-left flex items-start gap-3 p-3 rounded-xl transition-all group ${
                 isActive
-                  ? 'bg-blue-600 text-white shadow-xs font-medium'
+                  ? 'bg-[#274c77] text-white shadow-xs font-medium'
                   : 'text-slate-700 hover:bg-slate-100 hover:text-slate-900'
               }`}
             >
               <Icon
                 className={`w-5 h-5 shrink-0 mt-0.5 transition-colors ${
-                  isActive ? 'text-white' : 'text-slate-500 group-hover:text-blue-600'
+                  isActive ? 'text-white' : 'text-slate-500 group-hover:text-[#274c77]'
                 }`}
               />
               <div className="flex-1 min-w-0">
@@ -132,7 +132,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
                 </div>
                 <p
                   className={`text-[11px] truncate mt-0.5 ${
-                    isActive ? 'text-blue-100' : 'text-slate-500'
+                    isActive ? 'text-slate-200' : 'text-slate-500'
                   }`}
                 >
                   {item.desc}
@@ -144,17 +144,17 @@ export const Sidebar: React.FC<SidebarProps> = ({
 
         {/* Highlight Card */}
         <div className="pt-4 px-1">
-          <div className="p-3.5 bg-gradient-to-br from-blue-50 to-indigo-50/50 rounded-xl border border-blue-100">
-            <div className="flex items-center gap-1.5 text-xs font-bold text-blue-900">
-              <ShieldCheck className="w-4 h-4 text-blue-600 shrink-0" />
+          <div className="p-3.5 bg-[#f2f6fa] rounded-xl border border-[#d6e3ef]">
+            <div className="flex items-center gap-1.5 text-xs font-bold text-[#1f385c]">
+              <ShieldCheck className="w-4 h-4 text-[#274c77] shrink-0" />
               <span>การรับรองมาตรฐาน</span>
             </div>
             <p className="text-[11px] text-slate-600 mt-1 leading-relaxed">
               ผ่านความเห็นชอบจากสภาวิชาการ (26 พ.ย. 68) และสภามหาวิทยาลัยบูรพา (20 ธ.ค. 68)
             </p>
-            <div className="mt-2.5 pt-2 border-t border-blue-100/80 flex items-center justify-between text-xs">
+            <div className="mt-2.5 pt-2 border-t border-[#dce6f0] flex items-center justify-between text-xs">
               <span className="text-slate-500">หน่วยกิตขั้นต่ำ</span>
-              <span className="font-bold text-blue-800 tabular-nums">123 หน่วยกิต</span>
+              <span className="font-bold text-[#1f385c] tabular-nums">123 หน่วยกิต</span>
             </div>
           </div>
         </div>
