@@ -11,7 +11,8 @@ import {
   Award,
   ChevronRight,
   ShieldCheck,
-  Building2
+  Building2,
+  FileDown
 } from 'lucide-react';
 import { PROGRAM_INFO } from '../data/curriculumData';
 
@@ -21,6 +22,7 @@ interface SidebarProps {
   mobileOpen: boolean;
   onCloseMobile: () => void;
   totalCredits: number;
+  onDownloadSummary?: () => void;
 }
 
 export const Sidebar: React.FC<SidebarProps> = ({
@@ -29,6 +31,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
   mobileOpen,
   onCloseMobile,
   totalCredits,
+  onDownloadSummary,
 }) => {
   const menuItems = [
     {
@@ -128,8 +131,21 @@ export const Sidebar: React.FC<SidebarProps> = ({
           );
         })}
 
-        {/* Highlight Card */}
-        <div className="pt-4 px-1">
+        {/* Highlight Card & Action */}
+        <div className="pt-4 px-1 space-y-2">
+          {onDownloadSummary && (
+            <button
+              onClick={() => {
+                onDownloadSummary();
+                onCloseMobile();
+              }}
+              className="w-full flex items-center justify-center gap-2 p-2.5 bg-[#0066B3] hover:bg-[#005596] text-white rounded-xl text-xs font-semibold shadow-xs transition-colors cursor-pointer"
+            >
+              <FileDown className="w-4 h-4" />
+              <span>สรุปเล่มหลักสูตร (พรีวิว 1 หน้า)</span>
+            </button>
+          )}
+
           <div className="p-3.5 bg-[#F1F8FC] rounded-xl border border-[#d6e3ef]">
             <div className="flex items-center gap-1.5 text-xs font-bold text-[#0066B3]">
               <ShieldCheck className="w-4 h-4 text-[#0066B3] shrink-0" />
