@@ -50,7 +50,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-slate-50 text-slate-800 font-prompt">
+    <div className="min-h-screen flex flex-col bg-[#F1F8FC] text-slate-800 font-prompt">
       {/* Top Bar Header */}
       <Header
         currentTab={currentTab}

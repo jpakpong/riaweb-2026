@@ -57,8 +57,8 @@ export const CurriculumSummaryModal: React.FC<SummaryModalProps> = ({
             <p className="text-xs text-slate-500 font-medium">
               {PROGRAM_INFO.programNameEn}
             </p>
-            <p className="text-xs text-blue-800 font-semibold">
-              คณะวิศวกรรมศาสตร์ ภาควิชาวิศวกรรมเครื่องกล มหาวิทยาลัยบูรพา
+            <p className="text-xs text-[#0066B3] font-semibold">
+              ภาควิชาวิศวกรรมเครื่องกล คณะวิศวกรรมศาสตร์ มหาวิทยาลัยบูรพา
             </p>
           </div>
 

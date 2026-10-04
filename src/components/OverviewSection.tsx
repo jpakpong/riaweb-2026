@@ -39,13 +39,13 @@ export const OverviewSection: React.FC<OverviewSectionProps> = ({
 
   return (
     <div className="space-y-10 pb-12">
-      {/* Hero Section with Soft Muted Blue Palette & Visible Background Image */}
-      <section className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#1b2f48] via-[#243e5e] to-[#2f4f78] text-white shadow-lg">
+      {/* Hero Section with Vibrant Official Blue Palette */}
+      <section className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#005596] via-[#0066B3] to-[#1689D4] text-white shadow-lg">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <img
             src="/hero-bg.jpg"
             alt="ห้องปฏิบัติการหุ่นยนต์และระบบอัตโนมัติ มหาวิทยาลัยบูรพา"
-            className="w-full h-full object-cover opacity-25 mix-blend-luminosity scale-105"
+            className="w-full h-full object-cover opacity-20 mix-blend-luminosity scale-105"
             onError={(e) => {
               const target = e.currentTarget;
               if (!target.src.includes('/images/')) {
@@ -53,15 +53,10 @@ export const OverviewSection: React.FC<OverviewSectionProps> = ({
               }
             }}
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#1b2f48]/95 via-[#243e5e]/90 to-[#2f4f78]/80" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#004e8a]/90 via-[#0066B3]/85 to-[#1689D4]/75" />
         </div>
 
         <div className="relative px-6 py-10 sm:px-10 sm:py-14 max-w-4xl">
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/15 backdrop-blur-xs border border-white/25 rounded-md text-white text-xs font-semibold mb-4 shadow-2xs">
-            <Sparkles className="w-3.5 h-3.5 text-amber-300" />
-            <span>หลักสูตรใหม่ พ.ศ. 2569 · ภาควิชาวิศวกรรมเครื่องกล</span>
-          </div>
-
           <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-white leading-tight text-balance">
             หลักสูตรวิศวกรรมศาสตรบัณฑิต
             <span className="block text-amber-200 mt-1 font-bold">
@@ -69,25 +64,29 @@ export const OverviewSection: React.FC<OverviewSectionProps> = ({
             </span>
           </h1>
 
-          <p className="mt-2 text-sm sm:text-base text-slate-200 font-medium">
+          <p className="mt-2 text-sm sm:text-base text-slate-100 font-medium">
             Bachelor of Engineering Program in Robotics and Industrial Automation Engineering
           </p>
 
-          <p className="mt-4 text-sm sm:text-base text-white/90 leading-relaxed max-w-3xl font-light">
+          <p className="mt-1 text-xs sm:text-sm text-sky-200 font-medium">
+            ภาควิชาวิศวกรรมเครื่องกล คณะวิศวกรรมศาสตร์ มหาวิทยาลัยบูรพา
+          </p>
+
+          <p className="mt-4 text-sm sm:text-base text-white/95 leading-relaxed max-w-3xl font-light">
             {PROGRAM_INFO.philosophy}
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <button
               onClick={onNavigateToCurriculum}
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-white hover:bg-slate-100 text-[#1b2f48] text-sm font-bold rounded-lg shadow-sm transition-all focus-visible:ring-2 focus-visible:ring-white"
+              className="inline-flex items-center gap-2 px-5 py-2.5 bg-white hover:bg-slate-100 text-[#0066B3] text-sm font-bold rounded-lg shadow-sm transition-all focus-visible:ring-2 focus-visible:ring-white"
             >
               <span>ดูโครงสร้างหลักสูตร (123 หน่วยกิต)</span>
-              <ArrowRight className="w-4 h-4 text-[#274c77]" />
+              <ArrowRight className="w-4 h-4 text-[#0066B3]" />
             </button>
             <button
               onClick={onNavigateToStudyPlan}
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#1b2f48]/80 hover:bg-[#1b2f48] text-white text-sm font-semibold rounded-lg backdrop-blur-xs transition-colors border border-white/25"
+              className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#004e8a]/80 hover:bg-[#004e8a] text-white text-sm font-semibold rounded-lg backdrop-blur-xs transition-colors border border-white/25"
             >
               <span>แผนการศึกษา 4 ปี (แผน 1 & 2)</span>
             </button>
@@ -102,10 +101,10 @@ export const OverviewSection: React.FC<OverviewSectionProps> = ({
       </section>
 
       {/* Program Summary Stats Bar */}
-      <section className="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <section className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs">
           <p className="text-xs text-slate-500 font-medium">จำนวนหน่วยกิตรวม</p>
-          <p className="text-2xl font-bold text-[#1f385c] mt-1 tabular-nums">
+          <p className="text-2xl font-bold text-[#0066B3] mt-1 tabular-nums">
             {PROGRAM_INFO.minCredits} <span className="text-sm font-normal text-slate-500">หน่วยกิต</span>
           </p>
           <p className="text-xs text-slate-400 mt-0.5">ศึกษาทั่วไป 24 · เฉพาะ 93 · เสรี 6</p>
@@ -113,23 +112,15 @@ export const OverviewSection: React.FC<OverviewSectionProps> = ({
 
         <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs">
           <p className="text-xs text-slate-500 font-medium">ระยะเวลาหลักสูตร</p>
-          <p className="text-2xl font-bold text-[#1f385c] mt-1 tabular-nums">
+          <p className="text-2xl font-bold text-[#0066B3] mt-1 tabular-nums">
             {PROGRAM_INFO.durationYears} <span className="text-sm font-normal text-slate-500">ปี (ระบบทวิภาค)</span>
           </p>
           <p className="text-xs text-slate-400 mt-0.5">2 ภาคปกติ + 3 ภาคฤดูร้อน</p>
         </div>
 
         <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs">
-          <p className="text-xs text-slate-500 font-medium">การเริ่มเปิดสอน</p>
-          <p className="text-2xl font-bold text-[#1f385c] mt-1">
-            ภาคต้น 2569
-          </p>
-          <p className="text-xs text-slate-400 mt-0.5">ผ่านสภามหาวิทยาลัย 20 ธ.ค. 68</p>
-        </div>
-
-        <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs">
           <p className="text-xs text-slate-500 font-medium">ชื่อย่อปริญญา</p>
-          <p className="text-xl font-bold text-[#1f385c] mt-1">
+          <p className="text-xl font-bold text-[#0066B3] mt-1">
             วศ.บ. / B.Eng.
           </p>
           <p className="text-xs text-slate-400 mt-0.5">หุ่นยนต์และระบบอัตโนมัติฯ</p>
@@ -158,7 +149,7 @@ export const OverviewSection: React.FC<OverviewSectionProps> = ({
               className="p-5 rounded-xl bg-slate-50 hover:bg-[#f2f6fa] border border-slate-200/80 transition-colors"
             >
               <div className="flex items-center gap-3 mb-2.5">
-                <span className="w-7 h-7 rounded-lg bg-[#274c77] text-white font-bold text-xs flex items-center justify-center shrink-0">
+                <span className="w-7 h-7 rounded-lg bg-[#0066B3] text-white font-bold text-xs flex items-center justify-center shrink-0">
                   {index + 1}
                 </span>
                 <h3 className="text-sm font-bold text-slate-900 leading-snug">
@@ -171,8 +162,8 @@ export const OverviewSection: React.FC<OverviewSectionProps> = ({
             </div>
           ))}
 
-          {/* Special EEC & Career Link card with soft navy gradient */}
-          <div className="p-5 rounded-xl bg-gradient-to-br from-[#1b2f48] to-[#2c486c] text-white flex flex-col justify-between">
+          {/* Special EEC & Career Link card with vibrant navy gradient */}
+          <div className="p-5 rounded-xl bg-gradient-to-br from-[#005596] to-[#0066B3] text-white flex flex-col justify-between shadow-xs">
             <div>
               <div className="inline-flex items-center gap-1 text-[11px] font-semibold text-amber-300 uppercase tracking-wider mb-2">
                 <Building2 className="w-3.5 h-3.5" />
@@ -181,11 +172,11 @@ export const OverviewSection: React.FC<OverviewSectionProps> = ({
               <h3 className="text-sm font-bold text-white leading-snug">
                 ศูนย์กลางเขตเศรษฐกิจพิเศษ EEC
               </h3>
-              <p className="text-xs text-slate-200 mt-2 leading-relaxed">
+              <p className="text-xs text-slate-100 mt-2 leading-relaxed">
                 มหาวิทยาลัยบูรพาตั้งอยู่ใจกลางกลุ่มคลัสเตอร์อุตสาหกรรมเป้าหมาย รองรับการฝึกงาน สหกิจศึกษา และการจ้างงานโดยตรง
               </p>
             </div>
-            <div className="mt-4 pt-3 border-t border-white/20 flex items-center justify-between text-xs text-slate-300">
+            <div className="mt-4 pt-3 border-t border-white/20 flex items-center justify-between text-xs text-slate-200">
               <span>ชลบุรี - ระยอง - ฉะเชิงเทรา</span>
               <span className="font-semibold text-amber-200">100% Demand</span>
             </div>
@@ -194,16 +185,16 @@ export const OverviewSection: React.FC<OverviewSectionProps> = ({
       </section>
 
       {/* Integrated Design Project Continuum */}
-      <section className="bg-gradient-to-br from-[#1a2d46] via-[#233a57] to-[#2c486c] text-white rounded-2xl p-6 sm:p-8 shadow-md border border-slate-700">
+      <section className="bg-gradient-to-br from-[#004e8a] via-[#0066B3] to-[#1689D4] text-white rounded-2xl p-6 sm:p-8 shadow-md border border-blue-400/30">
         <div className="max-w-2xl mb-8">
-          <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1">
-            <Layers className="w-4 h-4 text-slate-300" />
+          <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-sky-200 uppercase tracking-wider mb-1">
+            <Layers className="w-4 h-4 text-sky-200" />
             <span>กระบวนการเรียนรู้เชิงออกแบบต่อเนื่อง</span>
           </div>
           <h2 className="text-xl sm:text-2xl font-bold text-white mt-1">
             โครงงานบูรณาการ 4 ระดับ (Cornerstone สู่ CWIE)
           </h2>
-          <p className="text-xs sm:text-sm text-slate-300 mt-1">
+          <p className="text-xs sm:text-sm text-sky-100 mt-1">
             Project-based & Work-integrated Learning สะพานเชื่อมระหว่างการเรียนในห้องเรียนกับการปฏิบัติงานจริงในโรงงาน
           </p>
         </div>

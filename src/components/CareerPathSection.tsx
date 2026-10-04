@@ -37,22 +37,18 @@ export const CareerPathSection: React.FC = () => {
         </div>
 
         {/* Market Demand Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-6 pt-5 border-t border-slate-100 text-xs">
-          <div className="p-3.5 bg-blue-50/50 rounded-xl border border-blue-100/60">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-6 pt-5 border-t border-slate-100 text-xs">
+          <div className="p-3.5 bg-blue-50/60 rounded-xl border border-blue-100">
             <span className="text-slate-500 block text-[11px]">อุตสาหกรรมเป้าหมาย</span>
-            <span className="font-bold text-blue-900 text-sm">New S-Curve & EEC</span>
+            <span className="font-bold text-[#0066B3] text-sm">New S-Curve & EEC</span>
           </div>
-          <div className="p-3.5 bg-emerald-50/50 rounded-xl border border-emerald-100/60">
+          <div className="p-3.5 bg-emerald-50/60 rounded-xl border border-emerald-100">
             <span className="text-slate-500 block text-[11px]">อัตราการมีงานทำ</span>
-            <span className="font-bold text-emerald-900 text-sm">สูงกว่า 95%</span>
+            <span className="font-bold text-emerald-800 text-sm">สูงกว่า 95%</span>
           </div>
-          <div className="p-3.5 bg-indigo-50/50 rounded-xl border border-indigo-100/60">
+          <div className="p-3.5 bg-sky-50/60 rounded-xl border border-sky-100">
             <span className="text-slate-500 block text-[11px]">เงินเดือนเริ่มต้นเฉลี่ย</span>
-            <span className="font-bold text-indigo-900 text-sm tabular-nums">30,000 - 45,000 ฿</span>
-          </div>
-          <div className="p-3.5 bg-amber-50/50 rounded-xl border border-amber-100/60">
-            <span className="text-slate-500 block text-[11px]">ใบอนุญาตประกอบวิชาชีพ</span>
-            <span className="font-bold text-amber-900 text-sm">ตามเกณฑ์สภาวิศวกร</span>
+            <span className="font-bold text-[#0066B3] text-sm tabular-nums">20,000 - 25,000 บาท</span>
           </div>
         </div>
       </div>
@@ -72,8 +68,8 @@ export const CareerPathSection: React.FC = () => {
                 onClick={() => setSelectedCareer(item)}
                 className={`p-4 rounded-xl border transition-all cursor-pointer ${
                   isSelected
-                    ? 'bg-[#274c77] text-white border-[#274c77] shadow-sm'
-                    : 'bg-white border-slate-200 hover:border-[#274c77] text-slate-800'
+                    ? 'bg-[#0066B3] text-white border-[#0066B3] shadow-sm'
+                    : 'bg-white border-slate-200 hover:border-[#1689D4] text-slate-800'
                 }`}
               >
                 <div className="flex items-center justify-between">

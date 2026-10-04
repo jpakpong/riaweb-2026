@@ -12,6 +12,7 @@ html {
 
 body {
   font-family: var(--font-prompt);
+  background-color: #F1F8FC;
 }
 
 /* Custom scrollbar for data tables and panels */

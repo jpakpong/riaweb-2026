@@ -13,9 +13,21 @@ import {
 } from 'lucide-react';
 
 // Format credits cleanly e.g. "3 (3-0-6)" without duplicate credit numbers
-export const formatCredits = (credits: number, format?: string): string => {
+// For general education and free-elective, requirement 6: do not use parentheses (e.g. 2, 3)
+export const formatCredits = (credits: number, format?: string, category?: string): string => {
+  if (
+    category === 'general' ||
+    category === 'free-elective' ||
+    (category && (category.includes('ศึกษาทั่วไป') || category.includes('เสรี')))
+  ) {
+    return `${credits}`;
+  }
   if (!format) return `${credits}`;
   const trimmed = format.trim();
+  // If format already has no parentheses e.g. "3" or "2"
+  if (/^\d+$/.test(trimmed)) {
+    return trimmed;
+  }
   // If format already starts with digit(s) e.g. "3 (3-0-6)" or "2 (1-2-3)"
   if (/^\d+\s*\(/.test(trimmed)) {
     return trimmed;
@@ -68,15 +80,15 @@ export const StudyPlanSection: React.FC = () => {
       <div className="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-2xs">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div className="max-w-2xl">
-            <div className="flex items-center gap-2 text-xs font-semibold text-[#274c77] uppercase tracking-wider mb-1">
+            <div className="flex items-center gap-2 text-xs font-semibold text-[#0066B3] uppercase tracking-wider mb-1">
               <Calendar className="w-4 h-4" />
               <span>แผนการจัดการเรียนรู้ 4 ปี</span>
             </div>
             <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold text-slate-900 leading-tight">
-              แผนการเรียนตามโครงสร้างหลักสูตร พ.ศ. 2569
+              แผนการเรียนตามโครงสร้างหลักสูตร
             </h1>
             <p className="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
-              รองรับ 2 รูปแบบการเรียนรู้: แผน 1 (สหกิจศึกษา 1 ภาคเรียน) และ แผน 2 (สหกิจศึกษาเข้มข้น 2 ภาคเรียนตลอดทั้งปี 4)
+              รองรับ 2 รูปแบบการเรียนรู้: แผน 1 (สหกิจศึกษา 1 ภาคเรียน) และ แผน 2 (สหกิจศึกษาตลอดทั้งปี 4)
             </p>
           </div>
 
@@ -86,7 +98,7 @@ export const StudyPlanSection: React.FC = () => {
               onClick={() => setSelectedPlan('plan1')}
               className={`px-4 py-2 text-xs font-bold rounded-lg transition-all ${
                 selectedPlan === 'plan1'
-                  ? 'bg-[#274c77] text-white shadow-2xs'
+                  ? 'bg-[#0066B3] text-white shadow-2xs'
                   : 'text-slate-600 hover:text-slate-900'
               }`}
             >
@@ -96,18 +108,18 @@ export const StudyPlanSection: React.FC = () => {
               onClick={() => setSelectedPlan('plan2')}
               className={`px-4 py-2 text-xs font-bold rounded-lg transition-all ${
                 selectedPlan === 'plan2'
-                  ? 'bg-[#274c77] text-white shadow-2xs'
+                  ? 'bg-[#0066B3] text-white shadow-2xs'
                   : 'text-slate-600 hover:text-slate-900'
               }`}
             >
-              แผน 2: สหกิจศึกษาเข้มข้น 2 ภาค
+              แผน 2: สหกิจศึกษา 2 ภาค
             </button>
           </div>
         </div>
 
         {/* Plan Feature Summary Card */}
-        <div className="mt-6 p-4 rounded-xl bg-[#f2f6fa] border border-[#d6e3ef] flex items-start gap-3">
-          <Info className="w-5 h-5 text-[#274c77] shrink-0 mt-0.5" />
+        <div className="mt-6 p-4 rounded-xl bg-[#F1F8FC] border border-[#d6e3ef] flex items-start gap-3">
+          <Info className="w-5 h-5 text-[#0066B3] shrink-0 mt-0.5" />
           <div className="text-xs leading-relaxed">
             {selectedPlan === 'plan1' ? (
               <p className="text-slate-700">
@@ -127,7 +139,7 @@ export const StudyPlanSection: React.FC = () => {
       {/* Course Search in Study Plan */}
       <div className="bg-white rounded-2xl border border-slate-200 p-5 shadow-2xs space-y-3">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-          <div className="flex items-center gap-2 text-xs font-semibold text-[#274c77] uppercase tracking-wider">
+          <div className="flex items-center gap-2 text-xs font-semibold text-[#0066B3] uppercase tracking-wider">
             <Search className="w-4 h-4" />
             <span>ค้นหารายวิชาในแผนการเรียน</span>
           </div>
@@ -145,7 +157,7 @@ export const StudyPlanSection: React.FC = () => {
             placeholder="ค้นหารายวิชา เช่น 51310169, PLC, ระบบหุ่นยนต์, แคลคูลัส, ปัญญาประดิษฐ์, Cornerstone..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full pl-10 pr-10 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#274c77] focus:bg-white transition-all"
+            className="w-full pl-10 pr-10 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#0066B3] focus:bg-white transition-all"
           />
           {searchTerm && (
             <button
@@ -173,7 +185,7 @@ export const StudyPlanSection: React.FC = () => {
             onClick={() => setSelectedYear(tab.id as number | 'all')}
             className={`px-4 py-2 text-xs font-semibold rounded-lg whitespace-nowrap transition-colors ${
               selectedYear === tab.id
-                ? 'bg-[#274c77] text-white shadow-2xs font-bold'
+                ? 'bg-[#0066B3] text-white shadow-2xs font-bold'
                 : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-50'
             }`}
           >
@@ -196,7 +208,7 @@ export const StudyPlanSection: React.FC = () => {
             );
           });
 
-          // If search is active and no courses match in this semester, optionally skip or show empty note
+          // If search is active and no courses match in this semester, skip
           if (q && displayCourses.length === 0) {
             return null;
           }
@@ -209,20 +221,20 @@ export const StudyPlanSection: React.FC = () => {
               {/* Semester Header */}
               <div className="px-5 py-4 bg-slate-50/80 border-b border-slate-200 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                 <div className="flex items-center gap-2.5">
-                  <span className="w-2.5 h-2.5 rounded-full bg-[#274c77]"></span>
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#0066B3]"></span>
                   <h3 className="text-sm sm:text-base font-bold text-slate-900">
                     {sem.termTitle}
                   </h3>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="text-xs text-slate-500">รวมหน่วยกิตภาคเรียนนี้:</span>
-                  <span className="text-xs font-bold text-[#1f385c] bg-[#edf3f8] px-2.5 py-1 rounded-md border border-[#d6e3ef] tabular-nums">
+                  <span className="text-xs font-bold text-[#0066B3] bg-[#F1F8FC] px-2.5 py-1 rounded-md border border-[#d6e3ef] tabular-nums">
                     {sem.totalCredits} หน่วยกิต
                   </span>
                 </div>
               </div>
 
-              {/* Courses Table (No checklist / No checkboxes) */}
+              {/* Courses Table */}
               <div className="overflow-x-auto">
                 <table className="w-full text-left border-collapse text-xs">
                   <thead>
@@ -250,7 +262,7 @@ export const StudyPlanSection: React.FC = () => {
                               : 'hover:bg-slate-50/70'
                           }`}
                         >
-                          <td className="py-3 px-4 font-mono font-bold text-[#274c77]">
+                          <td className="py-3 px-4 font-mono font-bold text-[#0066B3]">
                             {course.code}
                           </td>
                           <td className="py-3 px-4">
@@ -264,9 +276,9 @@ export const StudyPlanSection: React.FC = () => {
                           <td className="py-3 px-4 text-slate-600 text-[11px]">
                             {course.categoryTh}
                           </td>
-                          {/* Display as e.g. 3 (3-0-6) without repeating credits twice */}
+                          {/* Display as e.g. 3 (3-0-6) without repeating credits twice, or e.g. 2, 3 for GE/Free Elective */}
                           <td className="py-3 px-4 text-right font-mono tabular-nums font-semibold text-slate-800">
-                            {formatCredits(course.credits, course.format)}
+                            {formatCredits(course.credits, course.format, course.categoryTh)}
                           </td>
                         </tr>
                       );

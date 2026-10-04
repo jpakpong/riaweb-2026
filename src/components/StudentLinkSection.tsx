@@ -49,15 +49,15 @@ export const StudentLinkSection: React.FC = () => {
       {/* Header Banner */}
       <div className="bg-white rounded-2xl border border-slate-200/80 p-6 sm:p-8 shadow-2xs">
         <div className="max-w-3xl">
-          <div className="flex items-center gap-2 text-xs font-semibold text-blue-700 uppercase tracking-wider mb-1">
+          <div className="flex items-center gap-2 text-xs font-semibold text-[#0066B3] uppercase tracking-wider mb-1">
             <ExternalLink className="w-4 h-4" />
             <span>บริการและสารสนเทศนิสิต</span>
           </div>
           <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold text-slate-900 leading-tight">
-            ศูนย์รวมลิงก์บริการและระบบสารสนเทศนิสิต (Student Portal)
+            ศูนย์รวมลิงก์บริการและระบบสารสนเทศนิสิต
           </h1>
           <p className="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
-            เข้าถึงระบบทะเบียน BUU REG, ห้องเรียนออนไลน์ LMS, สำนักหอสมุด, แบบฟอร์มคำร้องวิชาการ และศูนย์ประสานงานสหกิจศึกษา คณะวิศวกรรมศาสตร์
+            เข้าถึงระบบทะเบียน BUU REG, คณะวิศวกรรมศาสตร์, BUU LMS, สำนักหอสมุด, สำนักคอมพิวเตอร์, ระบบสหกิจศึกษา CWIE และ EEC Automation Park
           </p>
         </div>
 
@@ -65,17 +65,16 @@ export const StudentLinkSection: React.FC = () => {
         <div className="mt-6 flex items-center gap-1.5 overflow-x-auto pb-1 no-scrollbar">
           {[
             { id: 'all', label: 'บริการทั้งหมด' },
-            { id: 'academic', label: 'ทะเบียน & สหกิจศึกษา' },
-            { id: 'facility', label: 'หอสมุด & สิ่งอำนวยความสะดวก' },
-            { id: 'it', label: 'ระบบเครือข่าย & ไอที' },
-            { id: 'student-affair', label: 'กิจกรรม & ทุนการศึกษา' },
+            { id: 'academic', label: 'วิชาการ & ทะเบียน & CWIE' },
+            { id: 'facility', label: 'หอสมุด & Automation Park' },
+            { id: 'it', label: 'สำนักคอมพิวเตอร์ & เครือข่าย' },
           ].map((tab) => (
             <button
               key={tab.id}
               onClick={() => setSelectedCategory(tab.id)}
               className={`px-3.5 py-1.5 text-xs font-semibold rounded-lg whitespace-nowrap transition-colors ${
                 selectedCategory === tab.id
-                  ? 'bg-blue-700 text-white shadow-2xs'
+                  ? 'bg-[#0066B3] text-white shadow-2xs font-bold'
                   : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
               }`}
             >
@@ -95,19 +94,19 @@ export const StudentLinkSection: React.FC = () => {
               href={service.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-5 bg-white rounded-2xl border border-slate-200/90 hover:border-[#274c77] hover:shadow-xs transition-all flex flex-col justify-between group"
+              className="p-5 bg-white rounded-2xl border border-slate-200/90 hover:border-[#1689D4] hover:shadow-xs transition-all flex flex-col justify-between group"
             >
               <div>
                 <div className="flex items-center justify-between mb-3">
-                  <div className="w-10 h-10 rounded-xl bg-[#f2f6fa] text-[#274c77] flex items-center justify-center group-hover:bg-[#274c77] group-hover:text-white transition-colors">
+                  <div className="w-10 h-10 rounded-xl bg-[#F1F8FC] text-[#0066B3] flex items-center justify-center group-hover:bg-[#0066B3] group-hover:text-white transition-colors">
                     <Icon className="w-5 h-5" />
                   </div>
-                  <span className="text-slate-400 group-hover:text-[#274c77] transition-colors">
+                  <span className="text-slate-400 group-hover:text-[#0066B3] transition-colors">
                     <ExternalLink className="w-4 h-4" />
                   </span>
                 </div>
 
-                <h3 className="text-sm font-bold text-slate-900 group-hover:text-[#274c77] transition-colors leading-snug">
+                <h3 className="text-sm font-bold text-slate-900 group-hover:text-[#0066B3] transition-colors leading-snug">
                   {service.titleTh}
                 </h3>
                 <p className="text-[11px] text-slate-400 mt-0.5 font-medium">

@@ -82,23 +82,9 @@ export const Sidebar: React.FC<SidebarProps> = ({
 
   const content = (
     <div className="flex flex-col h-full bg-white border-r border-slate-200">
-      {/* Sidebar Header / Program Key Info */}
-      <div className="p-4 sm:p-5 border-b border-slate-100 bg-slate-50/60">
-        <div className="flex items-center gap-2 text-xs font-semibold text-[#274c77] uppercase tracking-wider mb-1">
-          <GraduationCap className="w-4 h-4 text-[#274c77] shrink-0" />
-          <span>ภาควิชาวิศวกรรมเครื่องกล</span>
-        </div>
-        <h2 className="text-base font-bold text-slate-900 leading-snug">
-          วศ.บ. หุ่นยนต์และระบบอัตโนมัติ
-        </h2>
-        <p className="text-xs text-slate-500 mt-0.5">
-          หลักสูตรใหม่ พ.ศ. 2569 · ม.บูรพา
-        </p>
-      </div>
-
       {/* Navigation List */}
-      <div className="flex-1 overflow-y-auto px-3 py-4 space-y-1">
-        <div className="px-3 pb-2 text-[11px] font-semibold text-slate-400 uppercase tracking-wider">
+      <div className="flex-1 overflow-y-auto px-3 py-5 space-y-1">
+        <div className="px-3 pb-2 text-[11px] font-bold text-[#0066B3] uppercase tracking-wider">
           เมนูระบบสารสนเทศ
         </div>
         {menuItems.map((item) => {
@@ -110,13 +96,13 @@ export const Sidebar: React.FC<SidebarProps> = ({
               onClick={() => handleSelect(item.id)}
               className={`w-full text-left flex items-start gap-3 p-3 rounded-xl transition-all group ${
                 isActive
-                  ? 'bg-[#274c77] text-white shadow-xs font-medium'
-                  : 'text-slate-700 hover:bg-slate-100 hover:text-slate-900'
+                  ? 'bg-[#0066B3] text-white shadow-xs font-medium'
+                  : 'text-slate-700 hover:bg-[#F1F8FC] hover:text-[#0066B3]'
               }`}
             >
               <Icon
                 className={`w-5 h-5 shrink-0 mt-0.5 transition-colors ${
-                  isActive ? 'text-white' : 'text-slate-500 group-hover:text-[#274c77]'
+                  isActive ? 'text-white' : 'text-slate-500 group-hover:text-[#0066B3]'
                 }`}
               />
               <div className="flex-1 min-w-0">
@@ -132,7 +118,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
                 </div>
                 <p
                   className={`text-[11px] truncate mt-0.5 ${
-                    isActive ? 'text-slate-200' : 'text-slate-500'
+                    isActive ? 'text-blue-100' : 'text-slate-500'
                   }`}
                 >
                   {item.desc}
@@ -144,9 +130,9 @@ export const Sidebar: React.FC<SidebarProps> = ({
 
         {/* Highlight Card */}
         <div className="pt-4 px-1">
-          <div className="p-3.5 bg-[#f2f6fa] rounded-xl border border-[#d6e3ef]">
-            <div className="flex items-center gap-1.5 text-xs font-bold text-[#1f385c]">
-              <ShieldCheck className="w-4 h-4 text-[#274c77] shrink-0" />
+          <div className="p-3.5 bg-[#F1F8FC] rounded-xl border border-[#d6e3ef]">
+            <div className="flex items-center gap-1.5 text-xs font-bold text-[#0066B3]">
+              <ShieldCheck className="w-4 h-4 text-[#0066B3] shrink-0" />
               <span>การรับรองมาตรฐาน</span>
             </div>
             <p className="text-[11px] text-slate-600 mt-1 leading-relaxed">
@@ -154,7 +140,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
             </p>
             <div className="mt-2.5 pt-2 border-t border-[#dce6f0] flex items-center justify-between text-xs">
               <span className="text-slate-500">หน่วยกิตขั้นต่ำ</span>
-              <span className="font-bold text-[#1f385c] tabular-nums">123 หน่วยกิต</span>
+              <span className="font-bold text-[#0066B3] tabular-nums">123 หน่วยกิต</span>
             </div>
           </div>
         </div>

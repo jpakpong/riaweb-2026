@@ -70,15 +70,15 @@ export const CurriculumSection: React.FC = () => {
           <div className="p-4 rounded-xl bg-[#f2f6fa] border border-[#d6e3ef] flex flex-col justify-between">
             <div>
               <div className="flex items-center justify-between">
-                <span className="text-xs font-bold text-[#274c77]">หมวดที่ 1</span>
-                <span className="text-lg font-bold text-[#1f385c] tabular-nums">24 หน่วยกิต</span>
+                <span className="text-xs font-bold text-[#0066B3]">หมวดที่ 1</span>
+                <span className="text-lg font-bold text-[#0066B3] tabular-nums">24 หน่วยกิต</span>
               </div>
               <h3 className="text-sm font-bold text-slate-900 mt-2">หมวดวิชาศึกษาทั่วไป</h3>
               <p className="text-xs text-slate-600 mt-1 leading-relaxed">
                 พัฒนาทักษะภาษาอังกฤษ (6), การคิดแก้ปัญหาในยุคดิจิทัล (6), การจัดการชีวิตในสังคม (6) และความเป็นผู้ประกอบการ (6)
               </p>
             </div>
-            <div className="mt-3 pt-2 border-t border-[#d8e4f0] text-[11px] text-[#274c77] font-medium">
+            <div className="mt-3 pt-2 border-t border-[#d8e4f0] text-[11px] text-[#0066B3] font-medium">
               4 โมดูลพัฒนาทักษะศตวรรษที่ 21
             </div>
           </div>
@@ -163,7 +163,7 @@ export const CurriculumSection: React.FC = () => {
               onClick={() => setSelectedCategory(tab.id)}
               className={`px-3 py-1.5 text-xs font-medium rounded-lg whitespace-nowrap transition-colors ${
                 selectedCategory === tab.id
-                  ? 'bg-[#274c77] text-white shadow-2xs font-semibold'
+                  ? 'bg-[#0066B3] text-white shadow-2xs font-semibold'
                   : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-50 hover:text-slate-900'
               }`}
             >
@@ -180,12 +180,12 @@ export const CurriculumSection: React.FC = () => {
             <div
               key={course.code}
               onClick={() => setSelectedCourse(course)}
-              className="p-4 bg-white rounded-xl border border-slate-200/80 hover:border-blue-400 hover:shadow-2xs transition-all cursor-pointer flex flex-col justify-between group"
+              className="p-4 bg-white rounded-xl border border-slate-200/80 hover:border-[#1689D4] hover:shadow-2xs transition-all cursor-pointer flex flex-col justify-between group"
             >
               <div>
                 <div className="flex items-start justify-between gap-2">
                   <div className="flex items-center gap-2">
-                    <span className="font-mono text-xs font-bold text-[#274c77] bg-[#edf3f8] px-2 py-0.5 rounded-md border border-[#d6e3ef]">
+                    <span className="font-mono text-xs font-bold text-[#0066B3] bg-[#F1F8FC] px-2 py-0.5 rounded-md border border-[#d6e3ef]">
                       {course.code}
                     </span>
                     <span className="text-[11px] text-slate-500 font-medium">
@@ -193,11 +193,11 @@ export const CurriculumSection: React.FC = () => {
                     </span>
                   </div>
                   <span className="font-mono text-xs font-bold text-slate-800 shrink-0">
-                    {formatCredits(course.credits, course.format)}
+                    {formatCredits(course.credits, course.format, course.category)}
                   </span>
                 </div>
 
-                <h3 className="text-sm font-bold text-slate-900 mt-2 group-hover:text-blue-700 transition-colors leading-snug">
+                <h3 className="text-sm font-bold text-slate-900 mt-2 group-hover:text-[#0066B3] transition-colors leading-snug">
                   {course.nameTh}
                 </h3>
                 <p className="text-xs text-slate-500 mt-0.5 font-medium leading-tight">
@@ -205,7 +205,7 @@ export const CurriculumSection: React.FC = () => {
                 </p>
               </div>
 
-              <div className="mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between text-xs">
+              <div className="mt-3 pt-2.5 border-slate-100 flex items-center justify-between text-xs">
                 <span className="text-slate-400 text-[11px]">
                   {course.category === 'core'
                     ? 'วิชาแกนวิศวกรรม'
@@ -217,7 +217,7 @@ export const CurriculumSection: React.FC = () => {
                     ? 'วิชาเอกเลือก'
                     : 'วิชาศึกษาทั่วไป'}
                 </span>
-                <span className="text-[#274c77] font-semibold text-[11px] flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">
+                <span className="text-[#0066B3] font-semibold text-[11px] flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">
                   ดูรายละเอียด <ChevronRight className="w-3.5 h-3.5" />
                 </span>
               </div>
@@ -276,9 +276,11 @@ export const CurriculumSection: React.FC = () => {
                 {/* Credit and Format stats */}
                 <div className="grid grid-cols-2 gap-3 p-3.5 bg-slate-50 rounded-xl">
                   <div>
-                    <span className="text-slate-400 block text-[11px]">หน่วยกิต (บรรยาย-ปฏิบัติ-ค้นคว้า)</span>
-                    <span className="font-bold text-slate-900 text-sm sm:text-base font-mono">
-                      {formatCredits(selectedCourse.credits, selectedCourse.format)}
+                    <span className="text-slate-400 block text-[11px]">
+                      {selectedCourse.category === 'general' || selectedCourse.category === 'free-elective' ? 'จำนวนหน่วยกิต' : 'หน่วยกิต (บรรยาย-ปฏิบัติ-ค้นคว้า)'}
+                    </span>
+                    <span className="font-bold text-[#0066B3] text-sm sm:text-base font-mono">
+                      {formatCredits(selectedCourse.credits, selectedCourse.format, selectedCourse.category)}
                     </span>
                   </div>
                   <div>
@@ -343,7 +345,7 @@ export const CurriculumSection: React.FC = () => {
               <div className="pt-3 border-t border-slate-100 flex justify-end">
                 <button
                   onClick={() => setSelectedCourse(null)}
-                  className="px-5 py-2 bg-[#274c77] hover:bg-[#1f3d60] text-white font-medium rounded-lg text-xs transition-colors"
+                  className="px-5 py-2 bg-[#0066B3] hover:bg-[#004e8a] text-white font-medium rounded-lg text-xs transition-colors cursor-pointer"
                 >
                   ปิดหน้าต่าง
                 </button>
