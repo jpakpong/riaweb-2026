@@ -57,7 +57,7 @@ export const StudentLinkSection: React.FC = () => {
             ศูนย์รวมลิงก์บริการและระบบสารสนเทศนิสิต
           </h1>
           <p className="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
-            เข้าถึงระบบทะเบียน BUU REG, คณะวิศวกรรมศาสตร์, BUU LMS, สำนักหอสมุด, สำนักคอมพิวเตอร์, ระบบสหกิจศึกษา CWIE และ EEC Automation Park
+            เข้าถึงแบบฟอร์มการอุทธรณ์ของนิสิต, ระบบทะเบียน BUU REG, คณะวิศวกรรมศาสตร์, BUU LMS, สำนักหอสมุด, สำนักคอมพิวเตอร์, ระบบสหกิจศึกษา CWIE และ EEC Automation Park
           </p>
         </div>
 

@@ -706,6 +706,16 @@ export const LAB_FACILITIES = {
 
 export const STUDENT_SERVICES: StudentServiceLink[] = [
   {
+    id: 'student-appeal-form',
+    titleTh: 'แบบฟอร์มการอุทธรณ์ของนิสิต',
+    titleEn: 'Student Appeal Form',
+    descriptionTh: 'ยื่นคำร้องและแบบฟอร์มการอุทธรณ์สำหรับนิสิต หลักสูตรวิศวกรรมศาสตรบัณฑิต คณะวิศวกรรมศาสตร์ มหาวิทยาลัยบูรพา',
+    url: 'https://docs.google.com/forms/d/e/1FAIpQLSdlrC3SJGPgCssA8Bs8HzDr-sE60N8F2ONpQlrHUAbV9sBXKw/viewform?usp=dialog',
+    category: 'academic',
+    icon: 'FileText',
+    isExternal: true,
+  },
+  {
     id: 'buu-reg',
     titleTh: 'ระบบบริการการศึกษา (BUU REG)',
     titleEn: 'Burapha University Registrar System',
