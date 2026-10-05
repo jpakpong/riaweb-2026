@@ -17,7 +17,6 @@ import {
   Calendar,
   HelpCircle,
   ChevronDown,
-  Mail,
   Phone,
   MapPin,
   Building2,
@@ -220,11 +219,8 @@ export const StudentLinkSection: React.FC = () => {
               <span>ช่องทางการติดต่อ</span>
             </div>
             <h3 className="text-lg font-bold text-slate-900 leading-tight">
-              ภาควิชาวิศวกรรมเครื่องกล คณะวิศวกรรมศาสตร์
+              ภาควิชาวิศวกรรมเครื่องกล คณะวิศวกรรมศาสตร์ มหาวิทยาลัยบูรพา
             </h3>
-            <p className="text-xs text-slate-500 mt-1">
-              มหาวิทยาลัยบูรพา (Burapha University)
-            </p>
 
             <div className="mt-5 space-y-3 text-xs text-slate-700">
               <div className="flex items-start gap-2.5">
@@ -235,11 +231,7 @@ export const StudentLinkSection: React.FC = () => {
               </div>
               <div className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-blue-600 shrink-0" />
-                <span>โทรศัพท์: 0-3810-2222 ต่อ 3300 (สำนักงานคณบดีคณะวิศวกรรมศาสตร์)</span>
-              </div>
-              <div className="flex items-center gap-2.5">
-                <Mail className="w-4 h-4 text-blue-600 shrink-0" />
-                <span>อีเมลหลักสูตร: <a href="mailto:pakpong@eng.buu.ac.th" className="text-blue-700 font-medium hover:underline">pakpong@eng.buu.ac.th</a></span>
+                <span>โทรศัพท์: 0-3810-2222 ต่อ 3352 (สำนักงานภาควิชาวิศวกรรมเครื่องกล)</span>
               </div>
             </div>
           </div>

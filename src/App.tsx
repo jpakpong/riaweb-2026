@@ -115,10 +115,7 @@ export default function App() {
         </div>
 
         {/* Footer */}
-        <Footer
-          onSelectTab={handleSelectTab}
-          onOpenSummary={() => setSummaryModalOpen(true)}
-        />
+        <Footer onSelectTab={handleSelectTab} />
       </div>
 
       {/* Search Modal */}

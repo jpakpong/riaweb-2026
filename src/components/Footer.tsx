@@ -4,10 +4,9 @@ import { PROGRAM_INFO } from '../data/curriculumData';
 
 interface FooterProps {
   onSelectTab: (tab: string) => void;
-  onOpenSummary?: () => void;
 }
 
-export const Footer: React.FC<FooterProps> = ({ onSelectTab, onOpenSummary }) => {
+export const Footer: React.FC<FooterProps> = ({ onSelectTab }) => {
   return (
     <footer className="w-full bg-slate-900 text-slate-400 border-t border-slate-800 text-xs py-10 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
@@ -21,8 +20,8 @@ export const Footer: React.FC<FooterProps> = ({ onSelectTab, onOpenSummary }) =>
               {PROGRAM_INFO.facultyTh}
             </span>
           </div>
-          <p className="text-[11px] text-slate-500 max-w-md">
-            {PROGRAM_INFO.programNameTh} (วศ.บ. หุ่นยนต์และระบบอัตโนมัติอุตสาหกรรม)
+          <p className="text-[11px] text-slate-400 max-w-lg">
+            วิศวกรรมศาสตรบัณฑิต สาขาวิชาวิศวกรรมหุ่นยนต์และระบบอัตโนมัติอุตสาหกรรม หลักสูตรใหม่ พ.ศ. 2569
           </p>
           <div className="pt-1">
             <a
@@ -64,14 +63,6 @@ export const Footer: React.FC<FooterProps> = ({ onSelectTab, onOpenSummary }) =>
           <button onClick={() => onSelectTab('studentlink')} className="hover:text-white transition-colors">
             บริการนิสิต
           </button>
-          {onOpenSummary && (
-            <>
-              <span className="text-slate-700">·</span>
-              <button onClick={onOpenSummary} className="hover:text-sky-300 transition-colors text-slate-400">
-                สรุปหลักสูตร (A4)
-              </button>
-            </>
-          )}
         </div>
       </div>
 

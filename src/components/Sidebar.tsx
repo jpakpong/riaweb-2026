@@ -10,9 +10,7 @@ import {
   Sparkles,
   Award,
   ChevronRight,
-  ShieldCheck,
-  Building2,
-  FileDown
+  ShieldCheck
 } from 'lucide-react';
 import { PROGRAM_INFO } from '../data/curriculumData';
 
@@ -157,17 +155,6 @@ export const Sidebar: React.FC<SidebarProps> = ({
               <span className="text-slate-500">หน่วยกิตขั้นต่ำ</span>
               <span className="font-bold text-[#0066B3] tabular-nums">123 หน่วยกิต</span>
             </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Sidebar Footer */}
-      <div className="p-3.5 border-t border-slate-100 bg-white">
-        <div className="flex items-center gap-2.5 text-slate-600">
-          <Building2 className="w-4 h-4 text-slate-400 shrink-0" />
-          <div className="text-[11px] leading-tight">
-            <p className="font-medium text-slate-700">คณะวิศวกรรมศาสตร์</p>
-            <p className="text-slate-400">มหาวิทยาลัยบูรพา ชลบุรี</p>
           </div>
         </div>
       </div>
