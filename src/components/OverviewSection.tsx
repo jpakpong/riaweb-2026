@@ -15,13 +15,11 @@ import {
   Building2,
   Calendar,
   Sparkles,
-  ArrowRight,
   ShieldCheck,
   ChevronDown,
   MonitorCheck,
   Wrench,
-  Bot,
-  FileText
+  Bot
 } from 'lucide-react';
 
 interface OverviewSectionProps {
@@ -59,8 +57,8 @@ export const OverviewSection: React.FC<OverviewSectionProps> = ({
           <div className="absolute inset-0 bg-gradient-to-r from-[#004e8a]/90 via-[#0066B3]/85 to-[#1689D4]/75" />
         </div>
 
-        <div className="relative px-6 py-10 sm:px-10 sm:py-14 max-w-4xl">
-          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-white leading-tight text-balance">
+        <div className="relative px-6 py-8 sm:px-10 sm:py-10 max-w-4xl">
+          <h1 className="text-lg sm:text-[22px] lg:text-[27px] font-bold tracking-tight text-white leading-tight text-balance">
             หลักสูตรวิศวกรรมศาสตรบัณฑิต
             <span className="block text-amber-200 mt-1 font-bold">
               สาขาวิชาวิศวกรรมหุ่นยนต์และระบบอัตโนมัติอุตสาหกรรม
@@ -78,38 +76,6 @@ export const OverviewSection: React.FC<OverviewSectionProps> = ({
           <p className="mt-4 text-sm sm:text-base text-white/95 leading-relaxed max-w-3xl font-light">
             {PROGRAM_INFO.philosophy}
           </p>
-
-          <div className="mt-8 flex flex-wrap items-center gap-3">
-            <button
-              onClick={onNavigateToCurriculum}
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-white hover:bg-slate-100 text-[#0066B3] text-sm font-bold rounded-lg shadow-sm transition-all focus-visible:ring-2 focus-visible:ring-white"
-            >
-              <span>ดูโครงสร้างหลักสูตร (123 หน่วยกิต)</span>
-              <ArrowRight className="w-4 h-4 text-[#0066B3]" />
-            </button>
-            <button
-              onClick={onNavigateToStudyPlan}
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#004e8a]/80 hover:bg-[#004e8a] text-white text-sm font-semibold rounded-lg backdrop-blur-xs transition-colors border border-white/25"
-            >
-              <span>แผนการศึกษา 4 ปี (แผน 1 & 2)</span>
-            </button>
-            <button
-              onClick={onNavigateToStaff}
-              className="inline-flex items-center gap-2 px-4 py-2.5 text-white hover:text-amber-200 text-sm font-semibold transition-colors"
-            >
-              <span>คณาจารย์ผู้รับผิดชอบ</span>
-            </button>
-            {onOpenSummary && (
-              <button
-                onClick={onOpenSummary}
-                className="inline-flex items-center gap-2 px-4 py-2.5 bg-[#004e8a]/50 hover:bg-[#004e8a] text-white text-sm font-semibold rounded-lg backdrop-blur-xs transition-colors border border-white/20"
-                title="พรีวิวเอกสารสรุปหลักสูตร A4"
-              >
-                <FileText className="w-4 h-4 text-sky-200" />
-                <span>พรีวิวสรุปหลักสูตร (A4)</span>
-              </button>
-            )}
-          </div>
         </div>
       </section>
 
