@@ -524,7 +524,7 @@ export const ACADEMIC_STAFFS: AcademicStaff[] = [
     positionEn: 'Lecturer / Program Committee',
     role: 'responsible',
     image: '/paiboon.jpg',
-    email: 'paiboon.l@eng.buu.ac.th',
+    email: 'paiboonl@eng.buu.ac.th',
     office: 'อาคารภาควิชาวิศวกรรมเครื่องกล คณะวิศวกรรมศาสตร์',
     degrees: [
       { degree: 'วศ.ด.', field: 'วิศวกรรมเครื่องกล', institution: 'มหาวิทยาลัยเชียงใหม่', country: 'Thailand' },
@@ -541,7 +541,7 @@ export const ACADEMIC_STAFFS: AcademicStaff[] = [
     positionEn: 'Assistant Professor / Program Committee',
     role: 'responsible',
     image: '/jitti.jpg',
-    email: 'jitti.p@eng.buu.ac.th',
+    email: 'jitti@eng.buu.ac.th',
     office: 'อาคารภาควิชาวิศวกรรมเครื่องกล คณะวิศวกรรมศาสตร์',
     degrees: [
       { degree: 'Ph.D.', field: 'Mechanical Engineering', institution: 'The University of Manchester', country: 'UK' },
@@ -576,7 +576,7 @@ export const ACADEMIC_STAFFS: AcademicStaff[] = [
     positionEn: 'Lecturer / Program Committee',
     role: 'responsible',
     image: '/natthapol.jpg',
-    email: 'natthapol.s@eng.buu.ac.th',
+    email: 'natthapol.sr@eng.buu.ac.th',
     office: 'อาคารภาควิชาวิศวกรรมเครื่องกล คณะวิศวกรรมศาสตร์',
     degrees: [
       { degree: 'Ph.D.', field: 'Manufacturing Engineering', institution: 'University of Nottingham', country: 'UK' },
