@@ -696,11 +696,11 @@ export const LAB_FACILITIES = {
     { name: 'Q-ERP', spec: '30 & 50 Users (ระบบวางแผนทรัพยากรองค์กรและการผลิต)' },
   ],
   hardware: [
-    { category: 'PLC & Control', items: ['ชุดฝึก PLC Mitsubishi Q, iQ-F, iQ-R (33 ชุด)', 'ชุด HMI GOT2000 CC-Link IE (33 เครื่อง)', 'ชุดฝึก Servo & Motion Control Q (22 เครื่อง)', 'ชุดฝึก Electro-pneumatic, Inverter + Motor + PLC (13 ชุด)'] },
-    { category: 'Robotics', items: ['หุ่นยนต์อุตสาหกรรม 6 แกน (SCARA, KUKA, ABB, Yaskawa Coop Robot) รวม 6 ชุด', 'Delta Robot ABB (3 ชุด)', 'แขนกล Dobot Magician MG400 สำหรับฝึกควบคุมและ AI (20 ชุด)'] },
-    { category: 'IoT & Smart Factory', items: ['ชุด IIoT Siemens 2050 (10 ชุด)', 'ชุดฝึกระบบอัตโนมัติ MPU-A/B/C Autodidactic', 'ชุดฝึกสายการผลิตบรรจุสินค้า (1 ชุด)', 'Collaborative Robot ASSISTA with AMR (หุ่นยนต์ร่วมปฏิบัติงานกับรถนำทางอัตโนมัติ 1 ชุด)', 'Visual Inspection ระบบวิทัศน์ตรวจสอบฉลาก (1 ชุด)'] },
-    { category: 'VR & Prototyping', items: ['Hololens 2 Regular Edition (แว่น Mixed Reality 1 ชุด)', 'ชุดจำลอง Smart Factory – Model Line (1 ชุด)', 'ชุด AS/RS Shuttle Rack M คลังสินค้าอัตโนมัติพร้อมซอฟต์แวร์ (1 ชุด)', '3D Printer Maker XYZ Snap & Maker 3-in-1 (7 ชุด)'] },
-    { category: 'Computing Stations', items: ['โน้ตบุ๊ก Intel Core i5/i7 ประมวลผลระดับสูง (30 เครื่อง)', 'เครื่องคอมพิวเตอร์เวิร์กสเตชันประมวลผลระดับสูงสำหรับ CAD/AI (40 เครื่อง)'] },
+    { category: 'PLC & Control', items: ['ชุดฝึก PLC Mitsubishi Q, iQ-F, iQ-R', 'ชุด HMI GOT2000 CC-Link IE', 'ชุดฝึก Servo & Motion Control Q', 'ชุดฝึก Electro-pneumatic, Inverter + Motor + PLC'] },
+    { category: 'Robotics', items: ['หุ่นยนต์อุตสาหกรรม 6 แกน (SCARA, KUKA, ABB, Yaskawa Coop Robot)', 'Delta Robot ABB', 'แขนกล Dobot Magician MG400 สำหรับฝึกควบคุมและ AI'] },
+    { category: 'IoT & Smart Factory', items: ['ชุด IIoT Siemens 2050', 'ชุดฝึกระบบอัตโนมัติ MPU-A/B/C Autodidactic', 'ชุดฝึกสายการผลิตบรรจุสินค้า', 'Collaborative Robot ASSISTA with AMR (หุ่นยนต์ร่วมปฏิบัติงานกับรถนำทางอัตโนมัติ)', 'Visual Inspection ระบบวิทัศน์ตรวจสอบฉลาก'] },
+    { category: 'VR & Prototyping', items: ['Hololens 2 Regular Edition (แว่น Mixed Reality)', 'ชุดจำลอง Smart Factory – Model Line', 'ชุด AS/RS Shuttle Rack M คลังสินค้าอัตโนมัติพร้อมซอฟต์แวร์', '3D Printer Maker XYZ Snap & Maker 3-in-1'] },
+    { category: 'Computing Stations', items: ['โน้ตบุ๊ก Intel Core i5/i7 ประมวลผลระดับสูง', 'เครื่องคอมพิวเตอร์เวิร์กสเตชันประมวลผลระดับสูงสำหรับ CAD/AI'] },
   ],
 };
 
