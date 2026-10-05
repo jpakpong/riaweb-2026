@@ -98,6 +98,7 @@ export default function App() {
                 onNavigateToCurriculum={() => handleSelectTab('curriculum')}
                 onNavigateToStudyPlan={() => handleSelectTab('studyplan')}
                 onNavigateToStaff={() => handleSelectTab('staff')}
+                onOpenSummary={() => setSummaryModalOpen(true)}
               />
             )}
 
@@ -114,7 +115,10 @@ export default function App() {
         </div>
 
         {/* Footer */}
-        <Footer onSelectTab={handleSelectTab} />
+        <Footer
+          onSelectTab={handleSelectTab}
+          onOpenSummary={() => setSummaryModalOpen(true)}
+        />
       </div>
 
       {/* Search Modal */}

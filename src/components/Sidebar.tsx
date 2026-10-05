@@ -133,18 +133,17 @@ export const Sidebar: React.FC<SidebarProps> = ({
 
         {/* Highlight Card & Action */}
         <div className="pt-4 px-1 space-y-2">
-          {onDownloadSummary && (
-            <button
-              onClick={() => {
-                onDownloadSummary();
-                onCloseMobile();
-              }}
-              className="w-full flex items-center justify-center gap-2 p-2.5 bg-[#0066B3] hover:bg-[#005596] text-white rounded-xl text-xs font-semibold shadow-xs transition-colors cursor-pointer"
-            >
-              <FileDown className="w-4 h-4" />
-              <span>สรุปเล่มหลักสูตร (พรีวิว 1 หน้า)</span>
-            </button>
-          )}
+          <a
+            href="https://regservice.buu.ac.th/"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={onCloseMobile}
+            className="w-full flex items-center justify-center gap-2 p-2.5 bg-[#0066B3] hover:bg-[#005596] text-white rounded-xl text-xs font-bold shadow-xs hover:shadow-md transition-all cursor-pointer group"
+          >
+            <GraduationCap className="w-4 h-4" />
+            <span>สมัครเรียน</span>
+            <ExternalLink className="w-3.5 h-3.5 text-blue-200 group-hover:translate-x-0.5 transition-transform" />
+          </a>
 
           <div className="p-3.5 bg-[#F1F8FC] rounded-xl border border-[#d6e3ef]">
             <div className="flex items-center gap-1.5 text-xs font-bold text-[#0066B3]">

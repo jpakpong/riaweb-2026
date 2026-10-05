@@ -4,9 +4,10 @@ import { PROGRAM_INFO } from '../data/curriculumData';
 
 interface FooterProps {
   onSelectTab: (tab: string) => void;
+  onOpenSummary?: () => void;
 }
 
-export const Footer: React.FC<FooterProps> = ({ onSelectTab }) => {
+export const Footer: React.FC<FooterProps> = ({ onSelectTab, onOpenSummary }) => {
   return (
     <footer className="w-full bg-slate-900 text-slate-400 border-t border-slate-800 text-xs py-10 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
@@ -63,6 +64,14 @@ export const Footer: React.FC<FooterProps> = ({ onSelectTab }) => {
           <button onClick={() => onSelectTab('studentlink')} className="hover:text-white transition-colors">
             บริการนิสิต
           </button>
+          {onOpenSummary && (
+            <>
+              <span className="text-slate-700">·</span>
+              <button onClick={onOpenSummary} className="hover:text-sky-300 transition-colors text-slate-400">
+                สรุปหลักสูตร (A4)
+              </button>
+            </>
+          )}
         </div>
       </div>
 
@@ -70,8 +79,9 @@ export const Footer: React.FC<FooterProps> = ({ onSelectTab }) => {
         <div>
           © 2569 {PROGRAM_INFO.facultyTh} {PROGRAM_INFO.universityTh}. สงวนลิขสิทธิ์ทั้งหมด
         </div>
-        <div className="flex items-center gap-4">
+        <div className="flex flex-col sm:items-end gap-0.5 text-right">
           <span>169 ถนนลงหาดบางแสน ตำบลแสนสุข อำเภอเมืองชลบุรี จังหวัดชลบุรี 20131</span>
+          <span className="text-slate-400">โทรศัพท์ 0-3810-2222 ต่อ 3352</span>
         </div>
       </div>
     </footer>

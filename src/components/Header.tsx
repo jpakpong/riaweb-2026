@@ -8,7 +8,7 @@ interface HeaderProps {
   mobileMenuOpen: boolean;
   onToggleMobileMenu: () => void;
   onOpenSearch: () => void;
-  onDownloadSummary: () => void;
+  onDownloadSummary?: () => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({
@@ -17,7 +17,6 @@ export const Header: React.FC<HeaderProps> = ({
   mobileMenuOpen,
   onToggleMobileMenu,
   onOpenSearch,
-  onDownloadSummary,
 }) => {
   const navItems = [
     { id: 'overview', label: 'ภาพรวม' },
@@ -79,14 +78,6 @@ export const Header: React.FC<HeaderProps> = ({
               aria-label="ค้นหารายวิชาและอาจารย์"
             >
               <Search className="w-4 h-4 sm:w-5 sm:h-5" />
-            </button>
-
-            <button
-              onClick={onDownloadSummary}
-              className="hidden sm:inline-flex items-center gap-2 px-3.5 py-2 text-xs font-semibold text-white bg-[#0066B3] hover:bg-[#005596] rounded-lg transition-colors whitespace-nowrap shadow-xs focus-visible:ring-2 focus-visible:ring-[#0066B3]"
-            >
-              <FileDown className="w-3.5 h-3.5" />
-              <span>สรุปเล่มหลักสูตร</span>
             </button>
 
             {/* Mobile menu trigger */}

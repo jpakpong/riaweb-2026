@@ -20,19 +20,22 @@ import {
   ChevronDown,
   MonitorCheck,
   Wrench,
-  Bot
+  Bot,
+  FileText
 } from 'lucide-react';
 
 interface OverviewSectionProps {
   onNavigateToCurriculum: () => void;
   onNavigateToStudyPlan: () => void;
   onNavigateToStaff: () => void;
+  onOpenSummary?: () => void;
 }
 
 export const OverviewSection: React.FC<OverviewSectionProps> = ({
   onNavigateToCurriculum,
   onNavigateToStudyPlan,
   onNavigateToStaff,
+  onOpenSummary,
 }) => {
   const [activeFacilityTab, setActiveFacilityTab] = useState<'hardware' | 'software'>('hardware');
   const [expandedPlo, setExpandedPlo] = useState<string | null>('PLO1');
@@ -96,6 +99,16 @@ export const OverviewSection: React.FC<OverviewSectionProps> = ({
             >
               <span>คณาจารย์ผู้รับผิดชอบ</span>
             </button>
+            {onOpenSummary && (
+              <button
+                onClick={onOpenSummary}
+                className="inline-flex items-center gap-2 px-4 py-2.5 bg-[#004e8a]/50 hover:bg-[#004e8a] text-white text-sm font-semibold rounded-lg backdrop-blur-xs transition-colors border border-white/20"
+                title="พรีวิวเอกสารสรุปหลักสูตร A4"
+              >
+                <FileText className="w-4 h-4 text-sky-200" />
+                <span>พรีวิวสรุปหลักสูตร (A4)</span>
+              </button>
+            )}
           </div>
         </div>
       </section>
@@ -115,7 +128,7 @@ export const OverviewSection: React.FC<OverviewSectionProps> = ({
           <p className="text-2xl font-bold text-[#0066B3] mt-1 tabular-nums">
             {PROGRAM_INFO.durationYears} <span className="text-sm font-normal text-slate-500">ปี (ระบบทวิภาค)</span>
           </p>
-          <p className="text-xs text-slate-400 mt-0.5">2 ภาคปกติ + 3 ภาคฤดูร้อน</p>
+          <p className="text-xs text-slate-500 mt-0.5">ภาคต้น + ภาคปลาย + ภาคฤดูร้อน</p>
         </div>
 
         <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs">
@@ -123,7 +136,10 @@ export const OverviewSection: React.FC<OverviewSectionProps> = ({
           <p className="text-xl font-bold text-[#0066B3] mt-1">
             วศ.บ. / B.Eng.
           </p>
-          <p className="text-xs text-slate-400 mt-0.5">หุ่นยนต์และระบบอัตโนมัติฯ</p>
+          <div className="text-xs text-slate-600 font-normal mt-1 leading-snug">
+            <p>วิศวกรรมหุ่นยนต์และระบบอัตโนมัติอุตสาหกรรม</p>
+            <p className="text-[11px] text-slate-500">(Robotics and Industrial Automation Engineering)</p>
+          </div>
         </div>
       </section>
 

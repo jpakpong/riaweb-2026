@@ -37,18 +37,14 @@ export const AcademicStaffSection: React.FC = () => {
         </div>
 
         {/* Credentials Bar */}
-        <div className="mt-6 pt-5 border-t border-slate-100 grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
+        <div className="mt-6 pt-5 border-t border-slate-100 grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
           <div className="p-3 bg-[#F1F8FC] rounded-xl border border-[#d6e3ef]">
             <span className="text-slate-500 block text-[11px]">คณาจารย์ปริญญาเอก</span>
             <span className="font-bold text-[#0066B3] text-sm">100% Ph.D. / วศ.ด.</span>
           </div>
           <div className="p-3 bg-[#F1F8FC] rounded-xl border border-[#d6e3ef]">
             <span className="text-slate-500 block text-[11px]">สำเร็จการศึกษา</span>
-            <span className="font-bold text-[#0066B3] text-sm">UK, Australia, Thailand</span>
-          </div>
-          <div className="p-3 bg-[#F1F8FC] rounded-xl border border-[#d6e3ef]">
-            <span className="text-slate-500 block text-[11px]">ที่ทำงาน / ภาควิชา</span>
-            <span className="font-bold text-[#0066B3] text-sm">วิศวกรรมเครื่องกล</span>
+            <span className="font-bold text-[#0066B3] text-sm">ในประเทศ, ต่างประเทศ</span>
           </div>
           <div className="p-3 bg-[#F1F8FC] rounded-xl border border-[#d6e3ef]">
             <span className="text-slate-500 block text-[11px]">สัดส่วนอาจารย์ต่อนิสิต</span>
