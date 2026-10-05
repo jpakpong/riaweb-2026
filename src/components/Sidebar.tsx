@@ -48,10 +48,10 @@ export const Sidebar: React.FC<SidebarProps> = ({
     },
     {
       id: 'studyplan',
-      labelTh: 'แผนการศึกษา 4 ปี',
+      labelTh: 'แผนการเรียน 4 ปี',
       labelEn: 'Study Plan (Plans 1 & 2)',
       icon: CalendarDays,
-      desc: 'ตารางเรียนและแทร็กเกอร์ความก้าวหน้า',
+      desc: 'รูปแบบและตารางเรียน',
     },
     {
       id: 'staff',
