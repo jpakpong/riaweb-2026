@@ -54,7 +54,7 @@ export const SearchModal: React.FC<SearchModalProps> = ({
           <Search className="w-5 h-5 text-[#274c77] shrink-0" />
           <input
             type="text"
-            placeholder="ค้นหา เช่น PLC, ปัญญาประดิษฐ์, ดร.ภัคพงศ์, สหกิจศึกษา, หุ่นยนต์..."
+            placeholder="ค้นหา เช่น หุ่นยนต์ ระบบอัตโนมัติ ... "
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             autoFocus
