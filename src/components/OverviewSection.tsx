@@ -117,7 +117,7 @@ export const OverviewSection: React.FC<OverviewSectionProps> = ({
             <span>ลักษณะเด่นของหลักสูตร</span>
           </div>
           <h2 className="text-xl sm:text-2xl font-bold text-slate-900 mt-1">
-            ความโดดเด่นและจุดเด่นหลักสูตรใหม่ พ.ศ. 2569
+            จุดเด่นหลักสูตรใหม่ พ.ศ. 2569
           </h2>
           <p className="text-sm text-slate-600 mt-1">
             ออกแบบโดยมุ่งตอบโจทย์การเปลี่ยนแปลงของอุตสาหกรรมยุคใหม่อย่างแท้จริง ทั้งทฤษฎีและการปฏิบัติจริง
