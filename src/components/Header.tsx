@@ -23,7 +23,7 @@ export const Header: React.FC<HeaderProps> = ({
     { id: 'curriculum', label: 'หลักสูตร' },
     { id: 'studyplan', label: 'แผนการเรียน' },
     { id: 'staff', label: 'คณาจารย์' },
-    { id: 'career', label: 'สายอาชีพ' },
+    { id: 'career', label: 'อาชีพ' },
     { id: 'studentlink', label: 'บริการนิสิต' },
   ];
 

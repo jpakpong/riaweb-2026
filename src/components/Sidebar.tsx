@@ -44,18 +44,18 @@ export const Sidebar: React.FC<SidebarProps> = ({
       labelTh: 'โครงสร้างและรายวิชา',
       labelEn: 'Curriculum & Courses',
       icon: BookOpen,
-      desc: '123 หน่วยกิต หมวดวิชาและโมดูล',
+      desc: 'หมวดวิชาและโมดูล',
     },
     {
       id: 'studyplan',
-      labelTh: 'แผนการเรียน 4 ปี',
+      labelTh: 'แผนการเรียน',
       labelEn: 'Study Plan (Plans 1 & 2)',
       icon: CalendarDays,
       desc: 'รูปแบบและตารางเรียน',
     },
     {
       id: 'staff',
-      labelTh: 'คณาจารย์ผู้รับผิดชอบ',
+      labelTh: 'คณาจารย์',
       labelEn: 'Academic Staff',
       icon: Users,
       desc: 'ข้อมูลวุฒิการศึกษาและความเชี่ยวชาญ',
@@ -84,10 +84,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
   const content = (
     <div className="flex flex-col h-full bg-white border-r border-slate-200">
       {/* Navigation List */}
-      <div className="flex-1 overflow-y-auto px-3 py-5 space-y-1">
-        <div className="px-3 pb-2 text-[11px] font-bold text-[#0066B3] uppercase tracking-wider">
-          เมนูระบบสารสนเทศ
-        </div>
+      <div className="flex-1 overflow-y-auto px-3 py-4 space-y-1">
         {menuItems.map((item) => {
           const Icon = item.icon;
           const isActive = currentTab === item.id;

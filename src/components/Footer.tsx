@@ -49,7 +49,7 @@ export const Footer: React.FC<FooterProps> = ({ onSelectTab }) => {
           </button>
           <span className="text-slate-700">·</span>
           <button onClick={() => onSelectTab('studyplan')} className="hover:text-white transition-colors">
-            แผนการศึกษา 4 ปี
+            แผนการเรียน
           </button>
           <span className="text-slate-700">·</span>
           <button onClick={() => onSelectTab('staff')} className="hover:text-white transition-colors">
@@ -57,7 +57,7 @@ export const Footer: React.FC<FooterProps> = ({ onSelectTab }) => {
           </button>
           <span className="text-slate-700">·</span>
           <button onClick={() => onSelectTab('career')} className="hover:text-white transition-colors">
-            สายอาชีพ
+            อาชีพ
           </button>
           <span className="text-slate-700">·</span>
           <button onClick={() => onSelectTab('studentlink')} className="hover:text-white transition-colors">
